@@ -1,0 +1,53 @@
+zig.install:
+  # all paths are relative to the parameter 'kernel.root_dir'
+  manager_class: hehe
+  public_dir: public
+  public_mappings:
+    - { location: '', directory: '../src/catapatate/CatapatateBundle/Resources/web' }
+    - { location: '', directory: '../src/cartapatate/cartapatate/public' }
+    - { location: '', directory: '../src/cartapatate/ploomap/public' }
+    - { location: 'js', directory: '../src/cartapatate/zig/res/js' }
+    - { location: 'images/openlayers', directory: '../src/cartapatate/ploomap/public/js/openlayers/img' }
+
+  shrinksafe:
+    #profile: etc/catapatate.profile.js
+    buildscripts_dir: /home/okapi/dev/dojo/util/buildscripts
+    release_name: x
+    release_dir: public
+    build_version: 0.2.2
+    profileData:
+      prefixes:
+        - [dojo, /home/okapi/dev/dojo/dojo]
+        - [dijit, /home/okapi/dev/dojo/dijit]
+        - [dojox, /home/okapi/dev/dojo/dojox]
+        - [jig, public/js/jig]
+        - [ploomap, public/js/ploomap]
+        - [catapatate, public/js/catapatate]
+      layers:
+        -
+          name: ../workspace_default.js
+          copyrightFile: '../src/cartapatate/ploomap/public/js/ploomap/copyright.txt'
+          dependencies:
+            # misc deps
+            - dojo.fx.easing3
+            - dojox.io.xhrPlugins
+            - jig.workspace
+            - ploomap.tool.layer.Simple
+            - ploomap.tool.layer.Select
+            - ploomap.layer.Simple
+            - ploomap.layer.Vector
+            - ploomap.OpenLayers.Control.TileLoadSpinner
+            # initial cacoins
+            - jig.layout.RootPane
+            - jig.layout.BorderContainer
+            - ploomap.map.Classical
+            - ploomap.tool.Layers
+            - catapatate.info.About
+            # tools
+            - ploomap.tool.Export
+            - ploomap.tool.Measure
+            - ploomap.tool.OverviewMap
+            - ploomap.tool.StreetView
+            - ploomap.tool.Itineraries
+            - catapatate.info.About
+
