@@ -37,12 +37,13 @@ zig.install:
             - ploomap.layer.Simple
             - ploomap.layer.Vector
             - ploomap.OpenLayers.Control.TileLoadSpinner
+            - ploomap.OpenLayers.Control.SexyZoomBar
             # initial cacoins
             - jig.layout.RootPane
             - jig.layout.BorderContainer
-            - ploomap.map.Classical
+            - ploomap.map.Geoportal
             - ploomap.tool.Layers
-            - catapatate.info.About
+            - ign.info.About
             # tools
             - ploomap.tool.Export
             - ploomap.tool.Measure

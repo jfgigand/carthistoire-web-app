@@ -182,12 +182,12 @@ settings:
       date:
         label: Date
         type: date
+      story:
+        label: Histoire
+        type: textarea
       url:
         label: URL
         type: string
-      detail:
-        label: Détail
-        type: textarea
 
   elementTypes:
     acces:
