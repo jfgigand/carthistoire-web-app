@@ -10,7 +10,6 @@ zig.install:
     - { location: 'images/openlayers', directory: '../src/cartapatate/ploomap/public/js/openlayers/img' }
 
   shrinksafe:
-    #profile: etc/catapatate.profile.js
     buildscripts_dir: /home/okapi/dev/dojo/util/buildscripts
     release_name: x
     release_dir: public
