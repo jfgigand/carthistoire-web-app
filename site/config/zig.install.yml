@@ -3,7 +3,7 @@ zig.install:
   manager_class: hehe
   public_dir: public
   public_mappings:
-    - { location: '', directory: '../src/catapatate/CatapatateBundle/Resources/web' }
+    - { location: '', directory: '../src/ign/IgnBundle/Resources/web' }
     - { location: '', directory: '../src/cartapatate/cartapatate/public' }
     - { location: '', directory: '../src/cartapatate/ploomap/public' }
     - { location: 'js', directory: '../src/cartapatate/zig/res/js' }
@@ -49,5 +49,5 @@ zig.install:
             - ploomap.tool.OverviewMap
             - ploomap.tool.StreetView
             - ploomap.tool.Itineraries
-            - catapatate.info.About
+            - ign.info.About
 

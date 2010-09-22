@@ -1,11 +1,11 @@
 <?php
 
-namespace CatapatateBundle;
+namespace IgnBundle;
 
 use Symfony\Framework\Bundle\Bundle as BaseBundle;
 use Symfony\Components\DependencyInjection\ContainerInterface;
 
-class CatapatateBundle extends BaseBundle
+class IgnBundle extends BaseBundle
 {
   /*public function boot(ContainerInterface $container)
   {

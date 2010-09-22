@@ -15,7 +15,7 @@ use Symfony\Bundle\DoctrineMongoDBBundle\DoctrineMongoDBBundle;
 
 use Zig\Bundle\ZigBundle\ZigBundle;
 use Ploomap\Bundle\PloomapBundle\PloomapBundle;
-use CatapatateBundle\CatapatateBundle;
+use IgnBundle\IgnBundle;
 
 class Kernel extends BaseKernel
 {
@@ -25,7 +25,7 @@ class Kernel extends BaseKernel
   public function __construct($environment, $debug)
   {
     parent::__construct($environment, $debug);
-    $this->name = 'catapatate';
+    $this->name = 'ign';
   }
 
   public function registerRootDir()
@@ -50,7 +50,7 @@ class Kernel extends BaseKernel
                      // third-party : my owns
                      new ZigBundle(),
                      new PloomapBundle(),
-                     new CatapatateBundle(),
+                     new IgnBundle(),
                      );
     if ($this->isDebug()) {
       $bundles[] = new Symfony\Bundle\WebProfilerBundle\WebProfilerBundle();
@@ -62,10 +62,7 @@ class Kernel extends BaseKernel
   public function registerBundleDirs()
   {
     return array(
-                 //'Application'        => __DIR__.'/../src/Application',
-                 //'Bundle'             => __DIR__.'/../src/Bundle',
-                 //'CatapatateBundle'             => __DIR__.'/../src/catapatate/CatapatateBundle',
-                 'CatapatateBundle'           => __DIR__.'/../src/catapatate',
+                 'IgnBundle'           => __DIR__.'/../src/ign',
                  'Symfony\\Bundle' => __DIR__.'/../src/cartapatate/symfony/src/Symfony/Bundle',
                  'Zig\\Bundle'     => __DIR__.'/../src/cartapatate/zig/lib/Zig/Bundle',
                  'Ploomap\\Bundle'     => __DIR__.'/../src/cartapatate/ploomap/lib/Ploomap/Bundle',

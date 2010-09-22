@@ -1,9 +1,12 @@
 <?php
 
 require_once __DIR__.'/cartapatate/symfony/src/Symfony/Framework/UniversalClassLoader.php';
+//require_once __DIR__.'/cartapatate/symfony/src/Symfony/Component/HttpKernel/ClassCollectionLoader.php';
 
+//use Symfony\Component\HttpKernel\ClassCollectionLoader;
 use Symfony\Framework\UniversalClassLoader;
 
+//$loader = new ClassCollectionLoader();
 $loader = new UniversalClassLoader();
 $loader->registerNamespaces(array(
   'Symfony'     => __DIR__.'/cartapatate/symfony/src',
@@ -14,7 +17,7 @@ $loader->registerNamespaces(array(
   //'Bundle\\DoctrineMongoDBBundle' => __DIR__.'/cartapatate/doctrine-mongodb-bundle',
   'Zig'         => __DIR__.'/cartapatate/zig/lib',
   'Ploomap'     => __DIR__.'/cartapatate/ploomap/lib',
-  'CatapatateBundle' => __DIR__.'/catapatate',
+  'IgnBundle' => __DIR__.'/ign',
   //'Zend' => __DIR__.'/cartapatate/compat/lib',
   'Zend' => '/usr/src/zf2/library',
 ));
