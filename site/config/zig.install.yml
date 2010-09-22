@@ -22,7 +22,7 @@ zig.install:
         - [dojox, /home/okapi/dev/dojo/dojox]
         - [jig, public/js/jig]
         - [ploomap, public/js/ploomap]
-        - [catapatate, public/js/catapatate]
+        - [ign, public/js/ign]
       layers:
         -
           name: ../workspace_default.js
@@ -38,6 +38,7 @@ zig.install:
             - ploomap.layer.Vector
             - ploomap.OpenLayers.Control.TileLoadSpinner
             - ploomap.OpenLayers.Control.SexyZoomBar
+            - ploomap.layer.HistoricalFact
             # initial cacoins
             - jig.layout.RootPane
             - jig.layout.BorderContainer
