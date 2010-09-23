@@ -30,6 +30,7 @@ scripts:
   #- http://openlayers.org/api/OpenLayers.js
   - /js/openlayers/build/OpenLayers.js
   #- /js/openlayers/lib/OpenLayers.js
+  # prod:1272922719054764550 ; dev:150484252516911842
   - http://api.ign.fr/geoportail/api?v=1.1-e&amp;key=150484252516911842&amp;instance=VISU
   #- http://api.ign.fr/geoportail/api?v=1.1-m&amp;key=150484252516911842&amp;includeEngine=true
   - /x/workspace_default.js
@@ -119,7 +120,7 @@ widgets:
         #-
         #- Geoportal.Control.
         #- Geoportal.Control.
-        #- { class: OpenLayers.Control.ScaleLine, options: { maxWidth: 150, geodesic: true } }
+        - { class: OpenLayers.Control.ScaleLine, options: { maxWidth: 150, geodesic: true } }
         #- ploomap.OpenLayers.Control.TileLoadSpinner
   sideContainer:
     _class: jig.layout.BorderContainer
@@ -181,6 +182,9 @@ settings:
       name:
         label: Nom
         type: string
+      title:
+        label: Titre
+        type: string
       date:
         label: Date
         type: date
@@ -189,6 +193,9 @@ settings:
         type: textarea
       url:
         label: URL
+        type: string
+      image_url:
+        label: URL image
         type: string
 
   elementTypes:
