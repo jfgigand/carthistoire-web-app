@@ -29,8 +29,9 @@ scripts:
   #- http://maps.google.com/maps?file=api&amp;v=2&amp;sensor=false&amp;key=ABQIAAAAbLRoNMqR4Pen1V9KJHqHFxQA367lAHlkjABbUcAop0DGCpL_0RR1Fbs6U1WlvDJ0jWdsrgcAgGKukA
   #- http://openlayers.org/api/OpenLayers.js
   - /js/openlayers/build/OpenLayers.js
+  #- /js/openlayers/lib/OpenLayers.js
   - http://api.ign.fr/geoportail/api?v=1.1-e&amp;key=150484252516911842&amp;instance=VISU
-  #- http://api.ign.fr/geoportail/api?v=1.1-m&amp;key=4580440709375344942&amp;includeEngine=true
+  #- http://api.ign.fr/geoportail/api?v=1.1-m&amp;key=150484252516911842&amp;includeEngine=true
   - /x/workspace_default.js
   - /js/start.js
 
@@ -41,9 +42,10 @@ scriptAffectations:
 css:
   #- /js/openlayers/themes/default/style.css
   - /js/ign/css/application.css
+  #- /x/ign/css/application.css
   #- /x/dijit/themes/tundra/tundra.css
   #- /js/dijit/themes/tundra/tundra.css
-  - /x/jig/css/jig.css
+  #- /x/jig/css/jig.css
   #- /js/jig/css/jig.css
 
 
@@ -102,7 +104,7 @@ widgets:
         tools: false
       controls:
         #- OpenLayers.Control.KeyboardDefaults
-        - { class: OpenLayers.Control.Navigation, options: { mouseWheelOptions: { interval: 100 } } }
+        #- { class: OpenLayers.Control.Navigation, options: { mouseWheelOptions: { interval: 100 } } }
         #- OpenLayers.Control.MousePosition
         #- OpenLayers.Control.PanZoomBar
         - ploomap.OpenLayers.Control.SexyZoomBar

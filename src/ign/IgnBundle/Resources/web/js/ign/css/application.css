@@ -1,11 +1,28 @@
 
 /**
- ** Feuille CSS principale - Application Catapatate
+ ** Style propre à l'application IGN
  **
  */
 
-@import url("/js/dijit/themes/tundra/tundra.css");
-@import url("/js/jig/css/jig.css");
+
+/* Style commun à la plateforme cartapatate */
+@import url("../../../css/cartapatate.css");
 
 
 
+/*
+ * Couleurs - dominante bleue
+ *********/
+
+a, .link { color: #530; }
+a:hover, .link:hover { color: #500; }
+.jigLayoutRootPane .dijitSplitter .dijitSplitterThumb { background-color: #444; }
+.jigLayoutRootPane .dijitSplitterActive {  background-color: #fd5; }
+.jigCacoin, .jigCacoin .dijitContentPane { background-color: #cef; }
+.jigCacoin .dijitTabChecked { background-color: #eef; }
+.tundra .dijitBorderContainer-child.jigCacoin { border-color: #005; }
+.tundra .dijitBorderContainer { background-color: #ffe; }
+.jigCacoin .list .item:hover, .jigCacoin table.list > tbody > tr:hover > td { background-color: #fdc; }
+.jigCacoin .list .item.selected, .jigCacoin table.list > tbody > tr.selected > td { background-color: #f9f; }
+.jigCacoin .list .item, .jigCacoin table.list > tbody > tr > td { background-color: #9cf; }
+/*.jigCacoin.about { background-color: #9cf; }*/
