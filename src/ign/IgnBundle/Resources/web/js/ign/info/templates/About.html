@@ -1,15 +1,99 @@
-<div class="jigCacoin padding about">
-  <button dojoType="dijit.form.Button"
-          dojoAttachEvent="onClick:destroy">Fermer</button>
-  <h1>Concours <span>Géoportail</span></h1>
-  <p>
-    Projet IGN - Démo d'application pour le concours Géoportail 2010
-  </p>
-  <p class="copyright">
-    Cette application est dérivée de la plate-forme
-    <span>Cartapatate</span>.
-  </p>
-  <p>
-    Version : ${version}
-  </p>
+<div class="jigCacoin about">
+  <!--button dojoType="dijit.form.Button"
+             dojoAttachEvent="onClick:destroy">Fermer</button-->
+  <div dojoType="dijit.layout.AccordionContainer"
+       style="position:absolute;top:0;left:0;bottom:0;right:0;" dojoAttachPoint="acc">
+    <div dojoType="dijit.layout.ContentPane"
+         title="Sur cette application...">
+      <h1><span>Histoire</span> & Géographie</h1>
+      <p>
+        Projet IGN - Démo d'application participant au concours Géoportail 2010
+      </p>
+      <p style="text-align: right; font-style: italic;">
+        Jean-François Gigand
+      </p>
+      <h2>La Révolution !</h2>
+      <p>
+        Cette application donne la possibilité de visualiser des faits historiques.
+        Cette démonstration prend l'exemple de la Révolution française pour
+        présenter ses évènements majeurs sur la carte.
+      </p>
+    </div>
+    <div dojoType="dijit.layout.ContentPane" title="Comment démarrer ?">
+      <!--h2>Comment démarrer ?</h2-->
+      <p>
+        Les évènements sont également affichés dans la zone au coin supérieur droit,
+        où ils se placent sur la barre du temps selon leur date respective.
+        Veuillez survoler cette zone par la souris pour qu'elle s'élargisse
+        (il est possible de cliquer sur la case <i>garder visible</i>
+        pour qu'elle garde sa taille).
+        Le survol par le souris d'évènement sur la liste met en évidence son
+        marqueur sur la carte, et vice-versa.
+      </p>
+      <p>
+        Sur cette barre se trouvent deux curseurs qui peuvent être déplacés pour
+        limités les évènements affichés sur la carte à un intervalle de temps
+        plus restreint. Notez que la barre du temps se dilate automatiquement
+        en fonction des évènements disponible sur la zone d'affichage de la carte.
+      </p>
+      <p>
+        Sous la barre, un bouton permet d'animer automatiquement le filtre
+        temporel. La limite maximale (qu'il faut auparavant restreindre)
+        se déplace alors progressivement vers la date maximale.
+      </p>
+      <p>
+        Un clic sur un évènement affiche une bulle permettant de voir les
+        détails sur l'évènement (texte, photo). Il est également possible
+        de les modifier, via l'onglet <i>Éditer</i>. Enfin, la création d'un
+        nouvel évènement se fait dans les <i>Couches actives</i>, via le bouton
+        <i>couche</i>, puis <i>Créer nouveau</i>. Cliquer ensuite sur la carte
+        pour poser le point.
+      </p>
+    </div>
+    <div dojoType="dijit.layout.ContentPane" title="Fonctionnalités">
+      <!--h2>Fonctionnalités</h2-->
+      <ul>
+        <li>Barre de zoom améliorée</li>
+        <li>Gestionnaire de couches amélioré</li>
+        <li>Couche vectorielle : affichage & edition de vecteurs</li>
+      </ul>
+    </div>
+    <div dojoType="dijit.layout.ContentPane" title="Technologies">
+      <ul>
+        <li>Application basée sur l'<i>API Géoportail</i>, version 1.1</li>
+        <li>Utilise la bibliothèque <i>dojo</i></li>
+        <li>Service <i>WFS-T</i> local (<i>Web Feature Service - Transactional</i>)</li>
+        <li>Service <i>WMS-T</i> de l'IGN (<i>Web Map Service - Tiled</i>)</li>
+      </ul>
+    </div>
+    <div dojoType="dijit.layout.ContentPane" title="Utilité du service">
+      <p>
+        La Révolution française n'est qu'un exemple. La plupart des
+        évènements de l'Histoire sont géolocalisables. Cette application
+        réunit l'histoire et la géographie au cœur d'une interface intéractive
+        et dynamique.
+      </p>
+      <p>
+        En combinant le temps et l'espace, voir le déroulement de la Seconde Guerre mondiale, des Croisades,
+        de la Guerre de Cent ans, ou même de la Guerre des Gaules, est une manière privilégiée
+        d'approcher l'Histoire de France.
+      </p>
+      <!--p>
+        Dans le cadre du projet du Ministère de la Culture
+        pour la numérisation du patrimoine historique et culturel,
+        ce type de visualisateur valorise les informations
+      </p-->
+    </div>
+    <!--div dojoType="dijit.layout.ContentPane" title="Utilisateurs ciblés">
+      <p>
+      </p>
+    </div-->
+  </div>
+  <!--p class="copyright">
+  Cette application est dérivée de la plate-forme
+  <span>Cartapatate</span>.
+</p>
+<p>
+  Version : ${version}
+  </p-->
 </div>

@@ -26,3 +26,4 @@ a:hover, .link:hover { color: #500; }
 .jigCacoin .list .item.selected, .jigCacoin table.list > tbody > tr.selected > td { background-color: #f9f; }
 .jigCacoin .list .item, .jigCacoin table.list > tbody > tr > td { background-color: #9cf; }
 /*.jigCacoin.about { background-color: #9cf; }*/
+.olControlScaleLineTop {  background-color: #9cf; }
