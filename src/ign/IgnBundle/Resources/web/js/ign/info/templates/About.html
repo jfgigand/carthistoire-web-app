@@ -9,14 +9,20 @@
       <p>
         Projet IGN - Démo d'application participant au concours Géoportail 2010
       </p>
-      <p style="text-align: right; font-style: italic;">
-        Jean-François Gigand
+      <p style="text-align: right; padding-right: 30px; ">
+        par <i>Jean-François Gigand</i>
       </p>
       <h2>La Révolution !</h2>
       <p>
         Cette application donne la possibilité de visualiser des faits historiques.
         Cette démonstration prend l'exemple de la Révolution française pour
         présenter ses évènements majeurs sur la carte.
+      </p>
+      <p>
+        <button dojoType="jig.button.Action"
+                dojoAttachEvent="onClick:sendFeedback">
+          Envoyer un retour d'expérience
+        </button>
       </p>
     </div>
     <div dojoType="dijit.layout.ContentPane" title="Comment démarrer ?">
@@ -55,7 +61,12 @@
       <ul>
         <li>Barre de zoom améliorée</li>
         <li>Gestionnaire de couches amélioré</li>
-        <li>Couche vectorielle : affichage & edition de vecteurs</li>
+        <li>Barre temporelle</li>
+        <li>Animation automatique en fonction du temps</li>
+        <li>Style dynamique des marqueurs sur ma couche vectorielle</li>
+        <li>Bulle des propriétés</li>
+        <li>Édition des propriétés</li>
+        <li>Création de nouveaux points</li>
       </ul>
     </div>
     <div dojoType="dijit.layout.ContentPane" title="Technologies">

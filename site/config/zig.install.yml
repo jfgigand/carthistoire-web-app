@@ -51,4 +51,5 @@ zig.install:
             - ploomap.tool.StreetView
             - ploomap.tool.Itineraries
             - ign.info.About
+            - jig.tool.UserFeedback
 
