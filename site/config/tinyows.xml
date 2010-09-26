@@ -1,0 +1,35 @@
+<tinyows online_resource="http://127.0.0.1/cgi-bin/tinyows"
+	 schema_dir="/usr/local/opt/tinyows/schema/">
+
+  <pg host="127.0.0.1" user="tinyows" password="fsh3rdV" dbname="geo-dev" port="5432"/>
+
+  <metadata name="Service WFS pour ign-dev"
+	    title="version de dev de l'application Concours Geoportail 2010"/>
+
+  <contact name="Jean-Francois Gigand"
+    	   site="http://dev.ign.cartapatate.net/"
+   	   email="okapi@lapatate.org" />
+
+  <layer retrievable="1"
+	 writable="0"
+	 prefix="feature"
+	 server="http://histoire.cartapatate.net/"
+         srid="900913,4326"
+         name="communes_fr"
+         title="Communes de France" />
+
+  <layer retrievable="1"
+	 writable="1"
+	 prefix="feature"
+	 server="http://histoire.cartapatate.net/"
+         name="historicalfacts"
+         title="Faits historiques" />
+
+  <layer retrievable="1"
+	 writable="1"
+	 prefix="feature"
+	 server="http://histoire.cartapatate.net/"
+         name="worldwar2"
+         title="Seconde guerre mondiale" />
+
+</tinyows>

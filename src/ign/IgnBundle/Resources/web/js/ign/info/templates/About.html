@@ -12,17 +12,24 @@
       <p style="text-align: right; padding-right: 30px; ">
         par <i>Jean-François Gigand</i>
       </p>
-      <h2>La Révolution !</h2>
-      <p>
-        Cette application donne la possibilité de visualiser des faits historiques.
-        Cette démonstration prend l'exemple de la Révolution française pour
-        présenter ses évènements majeurs sur la carte.
-      </p>
       <p>
         <button dojoType="jig.button.Action"
                 dojoAttachEvent="onClick:sendFeedback">
           Envoyer un retour d'expérience
         </button>
+      </p>
+    </div>
+    <div dojoType="dijit.layout.ContentPane" title="Histoire & Géographie">
+      <h2>La carte de la Révolution...</h2>
+      <p>
+        Cette démonstration prend l'exemple de la Révolution française pour
+        présenter ses évènements majeurs sur la carte.
+      </p>
+      <h2>... et la révolution de la carte !</h2>
+      <p>
+        Cette application donne la possibilité de visualiser tous faits historiques
+        <b>en fonction du temps</b>. On peut restreindre la période affichée,
+        ou animer dynamiquement le temps.
       </p>
     </div>
     <div dojoType="dijit.layout.ContentPane" title="Comment démarrer ?">
@@ -56,27 +63,6 @@
         pour poser le point.
       </p>
     </div>
-    <div dojoType="dijit.layout.ContentPane" title="Fonctionnalités">
-      <!--h2>Fonctionnalités</h2-->
-      <ul>
-        <li>Barre de zoom améliorée</li>
-        <li>Gestionnaire de couches amélioré</li>
-        <li>Barre temporelle</li>
-        <li>Animation automatique en fonction du temps</li>
-        <li>Style dynamique des marqueurs sur ma couche vectorielle</li>
-        <li>Bulle des propriétés</li>
-        <li>Édition des propriétés</li>
-        <li>Création de nouveaux points</li>
-      </ul>
-    </div>
-    <div dojoType="dijit.layout.ContentPane" title="Technologies">
-      <ul>
-        <li>Application basée sur l'<i>API Géoportail</i>, version 1.1</li>
-        <li>Utilise la bibliothèque <i>dojo</i></li>
-        <li>Service <i>WFS-T</i> local (<i>Web Feature Service - Transactional</i>)</li>
-        <li>Service <i>WMS-T</i> de l'IGN (<i>Web Map Service - Tiled</i>)</li>
-      </ul>
-    </div>
     <div dojoType="dijit.layout.ContentPane" title="Utilité du service">
       <p>
         La Révolution française n'est qu'un exemple. La plupart des
@@ -94,6 +80,26 @@
         pour la numérisation du patrimoine historique et culturel,
         ce type de visualisateur valorise les informations
       </p-->
+    </div>
+    <div dojoType="dijit.layout.ContentPane" title="Fonctionnalités & technologies">
+      <h2>Fonctionnalités</h2>
+      <ul>
+        <li>Barre de zoom améliorée</li>
+        <li>Gestionnaire de couches amélioré</li>
+        <li>Barre temporelle</li>
+        <li>Animation automatique en fonction du temps</li>
+        <li>Style dynamique des marqueurs sur ma couche vectorielle</li>
+        <li>Bulle des propriétés</li>
+        <li>Édition des propriétés</li>
+        <li>Création de nouveaux points</li>
+      </ul>
+      <h2>Technologies</h2>
+      <ul>
+        <li>Application basée sur l'<a href="http://api.ign.fr/" target="_blank"><i>API Géoportail</i></a>, version 1.1</li>
+        <li>Utilise la bibliothèque <a href="http://www.dojotoolkit.org/" target="_blank"><i>dojo</i></a></li>
+        <li>Service <a href="http://fr.wikipedia.org/wiki/Web_Feature_Service" target="_blank"><i>WFS-T</i></a> local (<i>Web Feature Service - Transactional</i>)</li>
+        <li>Service <a href="http://fr.wikipedia.org/wiki/Web_Map_Service" target="_blank"><i>WMS-T</i></a> de l'IGN (<i>Web Map Service - Tiled</i>)</li>
+      </ul>
     </div>
     <!--div dojoType="dijit.layout.ContentPane" title="Utilisateurs ciblés">
       <p>

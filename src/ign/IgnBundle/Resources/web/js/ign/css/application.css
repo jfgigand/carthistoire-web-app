@@ -27,3 +27,6 @@ a:hover, .link:hover { color: #500; }
 .jigCacoin .list .item, .jigCacoin table.list > tbody > tr > td { background-color: #9cf; }
 /*.jigCacoin.about { background-color: #9cf; }*/
 .olControlScaleLineTop {  background-color: #9cf; }
+.jigLayoutRootPane .dijitToasterClip { margin-left: 180px; }
+.jigLayoutRootPane .dijitToasterContainer > .opacity { background-color: #ffa; opacity: 0.75; }
+.jigLayoutRootPane .dijitToasterContainer { width: 340px; border-top: 0; border-width: 1px; background: transparent; }

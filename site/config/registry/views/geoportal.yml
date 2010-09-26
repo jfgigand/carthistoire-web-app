@@ -5,7 +5,7 @@
 #############################################################
 
 class: Zig\View\Document\Workspace
-title: Catapatate Geoportal test
+title: "Carthistoire"
 
 #############################################################
 ## HEADER
@@ -79,7 +79,8 @@ widgets:
       children:
         - mainContainer
       toaster:
-        positionDirection: br-up
+        positionDirection: tl-down
+        #positionDirection: br-up
       #  # "br-up", "br-left", "bl-up", "bl-right", "tr-down", "tr-left", "tl-down", "tl-right"
   mainContainer:
     _class: jig.layout.BorderContainer
@@ -99,7 +100,8 @@ widgets:
       center:
         x: 179800
         y: 5438000
-        zoom: 12
+        #zoom: 6
+        zoom: 13
       buttons:
         location: false
         tools: false
@@ -149,10 +151,12 @@ widgets:
     _class: ploomap.tool.OverviewMap
     state:
       mapWidget: map
+      copyLayer: GEOGRAPHICALGRIDSYSTEMS.MAPS #_FXX_territory_
   about:
     _class: ign.info.About
 
 settings:
+
   layers:
     #- ign
     #- geol
@@ -163,7 +167,9 @@ settings:
     #- velib
     - communes_fr_geoportal
     - histoire_faits
+    #- worldwar2
     #- test
+
   mapTools:
     tools:
       - ploomap.tool.Magnifier
