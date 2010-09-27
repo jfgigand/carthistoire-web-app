@@ -36,8 +36,8 @@ scriptAffectations:
 
 css:
   #- /js/openlayers/themes/default/style.css
-  - /js/ign/css/application.css
-  #- /x/ign/css/application.css
+  #- /js/ign/css/application.css
+  - /x/ign/css/application.css
   #- /x/dijit/themes/tundra/tundra.css
   #- /js/dijit/themes/tundra/tundra.css
 
