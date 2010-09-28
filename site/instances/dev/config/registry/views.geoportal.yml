@@ -1,0 +1,7 @@
+
+title: "Carthistoire [DEV]"
+
+#scripts.openlayers: /js/openlayers/lib/OpenLayers.js
+scripts.workspace: null
+scripts.ign: http://api.ign.fr/geoportail/api?v=1.1-e&amp;key=6651562387375405070&amp;instance=VISU
+css.app: /js/ign/css/application.css
