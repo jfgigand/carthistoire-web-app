@@ -5,7 +5,7 @@
 #############################################################
 
 class: Zig\View\Document\Workspace
-title: "Carthistoire"
+title: "Carthistoire [DEV]"
 
 #############################################################
 ## HEADER
@@ -26,7 +26,7 @@ scripts:
   - /x/dojo/dojo.js
   - /js/openlayers/build/OpenLayers.js
   #- /js/openlayers/lib/OpenLayers.js
-  - http://api.ign.fr/geoportail/api?v=1.1-e&amp;key=499880235241209162&amp;instance=VISU
+  - http://api.ign.fr/geoportail/api?v=1.1-e&amp;key=6651562387375405070&amp;instance=VISU
   - /x/workspace_default.js
   - /js/start.js
 
@@ -36,8 +36,8 @@ scriptAffectations:
 
 css:
   #- /js/openlayers/themes/default/style.css
-  #- /js/ign/css/application.css
-  - /x/ign/css/application.css
+  - /js/ign/css/application.css
+  #- /x/ign/css/application.css
   #- /x/dijit/themes/tundra/tundra.css
   #- /js/dijit/themes/tundra/tundra.css
 
@@ -153,10 +153,10 @@ settings:
     #- geol
     #- igc_paris
     #- igc_versailles
-    - osm
+    #- osm
     #- cassini
     #- velib
-    - communes_fr_geoportal
+    #- communes_fr_geoportal
     - histoire_faits
     #- worldwar2
     #- test
