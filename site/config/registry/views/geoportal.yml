@@ -90,8 +90,8 @@ widgets:
       center:
         x: 179800
         y: 5438000
-        #zoom: 6
-        zoom: 13
+        zoom: 6
+        #zoom: 13
       buttons:
         location: false
         tools: false
@@ -157,7 +157,7 @@ settings:
     #- velib
     #- communes_fr_geoportal
     - histoire_faits
-    #- worldwar2
+    - worldwar2
     #- test
 
   mapTools:
