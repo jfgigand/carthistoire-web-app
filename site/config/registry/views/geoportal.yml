@@ -90,7 +90,7 @@ widgets:
       center:
         x: 179800
         y: 5438000
-        zoom: 6
+        zoom: 5
         #zoom: 13
       buttons:
         location: false
@@ -112,7 +112,7 @@ widgets:
         #-
         #- Geoportal.Control.
         #- Geoportal.Control.
-        - { class: OpenLayers.Control.ScaleLine, options: { maxWidth: 150, geodesic: true } }
+        - { class: ploomap.OpenLayers.Control.ScaleLine, options: { maxWidth: 150, geodesic: true } }
         #- ploomap.OpenLayers.Control.TileLoadSpinner
   sideContainer:
     _class: jig.layout.BorderContainer

@@ -5,7 +5,7 @@ dojo.provide('ign.settings');
 dojo.require('jig.workspace.fx');
 
 (function() {
-   console.log('hehe! settings', this, arguments);
+   //console.log('hehe! settings', this, arguments);
    dojo.mixin(jig.workspace.fx.color, {
                 openEnd: '#0000ff',
                 close: '#0000ff'

@@ -10,6 +10,11 @@ dojo.require('jig.tool.UserFeedback');
 // we need to put it somewhere...
 dojo.require('ign.settings');
 
+// used in code
+dojo.require('jig.macro.Player');
+dojo.require('ign.macro.testMacro');
+dojo.require('jig.workspace');
+
 dojo.declare('ign.info.About', [ jig.layout._Anchor, dijit._Templated ],
 {
   templateString: dojo.cache("ign.info", "templates/About.html"),
@@ -34,6 +39,18 @@ dojo.declare('ign.info.About', [ jig.layout._Anchor, dijit._Templated ],
     jig.workspace.autoAnchorWidget(widget);
     widget.startup();
   },
+
+  startDemo: function() {
+    var player = new jig.macro.Player(
+      {
+        macro: ign.macro.testMacro
+        //playing: true
+      });
+    jig.workspace.autoAnchorWidget(player);
+    player.startup();
+    player.attr('playing', true);
+  },
+
 
   resize: function() {
     //console.log('resize', this, arguments);
