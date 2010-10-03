@@ -61,6 +61,7 @@ dojo.mixin(ign.macro.testMacro,
         var zoomBar = this.getUniqueWidgetByClass(ploomap.OpenLayers.Control.SexyZoomBar);
         console.log('zoomBar', zoomBar);
         zoomBar.attr('forceAlternateLayout', true);
+        jig.workspace.highlightWidget(zoomBar, 'focus');
         this.onEnd();
       }
     },
@@ -78,6 +79,7 @@ dojo.mixin(ign.macro.testMacro,
       doPlay: function() {
         var zoomBar = this.getUniqueWidgetByClass(ploomap.OpenLayers.Control.SexyZoomBar);
         zoomBar.openMagnifier();
+        jig.workspace.highlightWidget(zoomBar.magnifier, 'focus');
         this.onEnd();
       }
     },

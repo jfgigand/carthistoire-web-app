@@ -12,7 +12,7 @@ dojo.require('ign.settings');
 
 // used in code
 dojo.require('jig.macro.Player');
-dojo.require('ign.macro.testMacro');
+dojo.require('ign.macro.presentationAppMacro');
 dojo.require('jig.workspace');
 
 dojo.declare('ign.info.About', [ jig.layout._Anchor, dijit._Templated ],
@@ -43,7 +43,7 @@ dojo.declare('ign.info.About', [ jig.layout._Anchor, dijit._Templated ],
   startDemo: function() {
     var player = new jig.macro.Player(
       {
-        macro: ign.macro.testMacro
+        macro: ign.macro.presentationAppMacro //testMacro
         //playing: true
       });
     jig.workspace.autoAnchorWidget(player);
