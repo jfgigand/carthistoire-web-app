@@ -3,7 +3,7 @@ zig.install:
   manager_class: hehe
   public_dir: public
   public_mappings:
-    - { location: '', directory: '../src/ign/IgnBundle/Resources/web' }
+    - { location: '', directory: '../src/histoire/HistoireBundle/Resources/web' }
     - { location: '', directory: '../src/cartapatate/cartapatate/public' }
     - { location: '', directory: '../src/cartapatate/ploomap/public' }
     - { location: 'js', directory: '../src/cartapatate/zig/res/js' }
@@ -21,7 +21,8 @@ zig.install:
         - [dojox, /home/okapi/dev/dojo/dojox]
         - [jig, public/js/jig]
         - [ploomap, public/js/ploomap]
-        - [ign, public/js/ign]
+        - [cartapatate, public/js/cartapatate]
+        - [histoire, public/js/histoire]
       layers:
         -
           name: ../workspace_default.js
@@ -43,13 +44,13 @@ zig.install:
             - jig.layout.BorderContainer
             - ploomap.map.Geoportal
             - ploomap.tool.Layers
-            - ign.info.About
+            - histoire.info.About
             # tools
             - ploomap.tool.Export
             - ploomap.tool.Measure
             - ploomap.tool.OverviewMap
             - ploomap.tool.StreetView
             - ploomap.tool.Itineraries
-            - ign.info.About
+            - histoire.info.About
             - jig.tool.UserFeedback
 

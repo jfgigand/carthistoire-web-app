@@ -1,10 +1,10 @@
-dojo.provide('ign.macro.presentationAppMacro');
+dojo.provide('histoire.macro.presentationAppMacro');
 
 // used in custom doPlay() functions, for FX
 dojo.require('ploomap.OpenLayers.Control.SexyZoomBar');
 dojo.require('ploomap.tool.layer.Simple');
 
-dojo.mixin(ign.macro.presentationAppMacro,
+dojo.mixin(histoire.macro.presentationAppMacro,
 {
   actions: [
     { type: 'jig.macro.action.TextRunner', text: 'Démarrage de la démonstration...', alone: true },

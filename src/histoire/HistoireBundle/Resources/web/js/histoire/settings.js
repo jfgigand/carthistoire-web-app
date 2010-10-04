@@ -1,5 +1,5 @@
 
-dojo.provide('ign.settings');
+dojo.provide('histoire.settings');
 
 // deps
 dojo.require('jig.workspace.fx');

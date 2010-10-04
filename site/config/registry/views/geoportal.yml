@@ -36,7 +36,7 @@ scriptAffectations:
 css:
   #ol: /js/openlayers/themes/default/style.css
   #app: /js/ign/css/application.css
-  app: /x/ign/css/application.css
+  app: /x/histoire/css/application.css
   #tundra: /x/dijit/themes/tundra/tundra.css
   #tundra: /js/dijit/themes/tundra/tundra.css
 
@@ -143,7 +143,7 @@ widgets:
       mapWidget: map
       copyLayer: GEOGRAPHICALGRIDSYSTEMS.MAPS #_FXX_territory_
   about:
-    _class: ign.info.About
+    _class: histoire.info.About
 
 settings:
 
@@ -169,7 +169,7 @@ settings:
       - ploomap.tool.StreetView
       - ploomap.tool.Itineraries
       - jig.tool.UserFeedback
-      - ign.info.About
+      - histoire.info.About
 
 
 

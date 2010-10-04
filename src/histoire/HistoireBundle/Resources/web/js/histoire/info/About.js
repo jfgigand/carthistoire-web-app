@@ -1,5 +1,5 @@
 
-dojo.provide('ign.info.About');
+dojo.provide('histoire.info.About');
 
 dojo.require('jig.layout._Anchor');
 dojo.require('dijit._Templated');
@@ -8,16 +8,16 @@ dojo.require('dijit.layout.AccordionContainer');
 dojo.require('jig.tool.UserFeedback');
 
 // we need to put it somewhere...
-dojo.require('ign.settings');
+dojo.require('histoire.settings');
 
 // used in code
 dojo.require('jig.macro.Player');
-dojo.require('ign.macro.presentationAppMacro');
+dojo.require('histoire.macro.presentationAppMacro');
 dojo.require('jig.workspace');
 
-dojo.declare('ign.info.About', [ jig.layout._Anchor, dijit._Templated ],
+dojo.declare('histoire.info.About', [ jig.layout._Anchor, dijit._Templated ],
 {
-  templateString: dojo.cache("ign.info", "templates/About.html"),
+  templateString: dojo.cache("histoire.info", "templates/About.html"),
   widgetsInTemplate: true,
   name: 'Notice',
   icon: '/images/icons/tool_about.png',
@@ -43,7 +43,7 @@ dojo.declare('ign.info.About', [ jig.layout._Anchor, dijit._Templated ],
   startDemo: function() {
     var player = new jig.macro.Player(
       {
-        macro: ign.macro.presentationAppMacro //testMacro
+        macro: histoire.macro.presentationAppMacro //testMacro
         //playing: true
       });
     jig.workspace.autoAnchorWidget(player);
