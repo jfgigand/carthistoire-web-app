@@ -46,7 +46,9 @@ dojo.declare('histoire.info.About', [ jig.layout._Anchor, dijit._Templated ],
         macro: histoire.macro.presentationAppMacro //testMacro
         //playing: true
       });
-    jig.workspace.autoAnchorWidget(player);
+    //jig.workspace.autoAnchorWidget(player);
+    player.placeAt(dojo.body(), 'first');
+    jig.workspace.highlightWidget(player, 'open');
     player.startup();
     player.attr('playing', true);
   },
