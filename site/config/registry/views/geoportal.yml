@@ -87,7 +87,11 @@ widgets:
     _class: ploomap.map.Geoportal
     #_class: ploomap.map.Classical
     state:
-      layersDefsClass: histoire.layersDefs.Application
+      layersDefsClass: histoire.layerDef.Application
+      layers:
+        - { name: GEOGRAPHICALGRIDSYSTEMS.MAPS, opacity: 0.5 }
+        - revolution_francaise
+        - worldwar2
       center:
         x: 179800
         y: 5438000
@@ -147,7 +151,8 @@ widgets:
     _class: histoire.info.About
 
 settings:
-
+  layerManager:
+    layerLibraryClass: histoire.layerLibrary.Application
   layers:
     #- ign
     #- geol
@@ -157,7 +162,21 @@ settings:
     #- cassini
     #- velib
     #- communes_fr_geoportal
-    - histoire_faits
+    - ADDRESSES.CROSSINGS
+    - ADMINISTRATIVEUNITS.BOUNDARIES
+    - BUILDINGS.BUILDINGS
+    - CADASTRALPARCELS.PARCELS
+    - ELEVATION.SLOPS
+    - GEOGRAPHICALGRIDSYSTEMS.MAPS
+    - HYDROGRAPHY.HYDROGRAPHY
+    - ORTHOIMAGERY.ORTHOPHOTOS
+    - ELEVATION.LEVEL0
+    - TOPONYMS.ALL
+    - TRANSPORTNETWORKS.RAILWAYS
+    - TRANSPORTNETWORKS.ROADS
+    - TRANSPORTNETWORKS.RUNWAYS
+    - UTILITYANDGOVERNMENTALSERVICES.ALL
+    - revolution_francaise
     - worldwar2
     #- test
 

@@ -1,11 +1,11 @@
 <?php
 
-namespace IgnBundle;
+namespace HistoireBundle;
 
 use Symfony\Framework\Bundle\Bundle as BaseBundle;
 use Symfony\Components\DependencyInjection\ContainerInterface;
 
-class IgnBundle extends BaseBundle
+class HistoireBundle extends BaseBundle
 {
   /*public function boot(ContainerInterface $container)
   {

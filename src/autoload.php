@@ -17,7 +17,7 @@ $loader->registerNamespaces(array(
   //'Bundle\\DoctrineMongoDBBundle' => __DIR__.'/cartapatate/doctrine-mongodb-bundle',
   'Zig'         => __DIR__.'/cartapatate/zig/lib',
   'Ploomap'     => __DIR__.'/cartapatate/ploomap/lib',
-  'IgnBundle' => __DIR__.'/ign',
+  'HistoireBundle' => __DIR__.'/histoire',
   //'Zend' => __DIR__.'/cartapatate/compat/lib',
   'Zend' => '/usr/src/zf2/library',
 ));

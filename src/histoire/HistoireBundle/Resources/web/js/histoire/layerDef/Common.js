@@ -17,16 +17,17 @@ dojo.declare('histoire.layerDef.Common', [ ploomap.layerDef.Base ],
   },
 
   registerHistoireCommonLayers: function() {
-    console.log('registerHistoireCommonLayers', this, arguments);
+    //console.log('registerHistoireCommonLayers', this, arguments);
     this.addLayers(this.histoireCommonLayers);
   },
 
   // histoireCommonLayers: array of layer defs
   histoireCommonLayers: [
     {
-      name: 'histoire_faits',
+      name: 'revolution_francaise',
       title: 'Révolution française',
       icon: '/images/icons/layer_histoire_faits.png',
+      provider: 'cartapatate-histoire',
       layers: [
         {
           creator: function(mapWidget) {
@@ -77,6 +78,7 @@ dojo.declare('histoire.layerDef.Common', [ ploomap.layerDef.Base ],
       name: 'worldwar2',
       title: '2<sup>nde</sup> Guerre mondiale',
       icon: '/images/icons/layer_worldwar2.png',
+      provider: 'cartapatate-histoire',
       layers: [
         {
           creator: function(mapWidget) {

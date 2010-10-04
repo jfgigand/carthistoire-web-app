@@ -15,7 +15,7 @@ use Symfony\Bundle\DoctrineMongoDBBundle\DoctrineMongoDBBundle;
 
 use Zig\Bundle\ZigBundle\ZigBundle;
 use Ploomap\Bundle\PloomapBundle\PloomapBundle;
-use HistoireBundle\IgnBundle;
+use HistoireBundle\HistoireBundle;
 
 class Kernel extends BaseKernel
 {
@@ -25,7 +25,7 @@ class Kernel extends BaseKernel
   public function __construct($environment, $debug)
   {
     parent::__construct($environment, $debug);
-    $this->name = 'ign';
+    $this->name = 'histoire';
   }
 
   public function registerRootDir()
