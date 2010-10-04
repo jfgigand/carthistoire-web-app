@@ -87,6 +87,7 @@ widgets:
     _class: ploomap.map.Geoportal
     #_class: ploomap.map.Classical
     state:
+      layersDefsClass: histoire.layersDefs.Application
       center:
         x: 179800
         y: 5438000

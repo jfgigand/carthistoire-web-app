@@ -15,7 +15,7 @@ use Symfony\Bundle\DoctrineMongoDBBundle\DoctrineMongoDBBundle;
 
 use Zig\Bundle\ZigBundle\ZigBundle;
 use Ploomap\Bundle\PloomapBundle\PloomapBundle;
-use IgnBundle\IgnBundle;
+use HistoireBundle\IgnBundle;
 
 class Kernel extends BaseKernel
 {
@@ -50,7 +50,7 @@ class Kernel extends BaseKernel
                      // third-party : my owns
                      new ZigBundle(),
                      new PloomapBundle(),
-                     new IgnBundle(),
+                     new HistoireBundle(),
                      );
     if ($this->isDebug()) {
       $bundles[] = new Symfony\Bundle\WebProfilerBundle\WebProfilerBundle();
@@ -62,7 +62,7 @@ class Kernel extends BaseKernel
   public function registerBundleDirs()
   {
     return array(
-                 'IgnBundle'           => __DIR__.'/../src/ign',
+                 'HistoireBundle'           => __DIR__.'/../src/histoire',
                  'Symfony\\Bundle' => __DIR__.'/../src/cartapatate/symfony/src/Symfony/Bundle',
                  'Zig\\Bundle'     => __DIR__.'/../src/cartapatate/zig/lib/Zig/Bundle',
                  'Ploomap\\Bundle'     => __DIR__.'/../src/cartapatate/ploomap/lib/Ploomap/Bundle',
