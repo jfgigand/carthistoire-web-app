@@ -48,9 +48,9 @@ dojo.declare('histoire.info.About', [ jig.layout._Anchor, dijit._Templated ],
       });
     //jig.workspace.autoAnchorWidget(player);
     player.placeAt(dojo.body(), 'first');
-    jig.workspace.highlightWidget(player, 'open');
     player.startup();
     player.attr('playing', true);
+    jig.workspace.highlightWidget(player, 'open');
   },
 
 
