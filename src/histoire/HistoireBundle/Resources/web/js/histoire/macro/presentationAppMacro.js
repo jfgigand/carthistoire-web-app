@@ -95,6 +95,7 @@ dojo.mixin(histoire.macro.presentationAppMacro,
         this.onEnd();
       }
     },
+    { type: 'ploomap.macro.action.LayerRunner', layer: 'GEOGRAPHICALGRIDSYSTEMS.MAPS', opacity: 0.5 },
     { type: 'ploomap.macro.action.RegionRunner', restore: 'initial' }
 
     /*{

@@ -126,9 +126,12 @@ widgets:
       children:
         - layers
         #- overviewMap
-        - about
+        - macroEditor
+        #- about
         #- sideContainer2
       paneSize: 400
+  macroEditor:
+    _class: jig.macro.Editor
   sideContainer2:
     _class: jig.layout.BorderContainer
     state:
