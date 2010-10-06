@@ -2,3 +2,6 @@
 title: "Carthistoire [DEMO]"
 
 scripts.ign: http://api.ign.fr/geoportail/api?v=1.1-e&amp;key=7910055355878502507&amp;instance=VISU
+
+settings.layers:
+  - worldwar2
