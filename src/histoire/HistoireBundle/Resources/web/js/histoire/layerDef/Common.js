@@ -101,7 +101,7 @@ dojo.declare('histoire.layerDef.Common', [ ploomap.layerDef.Base ],
                     formatOptions: {
                       internalProjection: mapWidget.map.getProjectionObject(),
                       externalProjection: new OpenLayers.Projection("EPSG:4326")
-                    }
+                    },
                     //schema: window.location.protocol+'//'+window.location.host+'/cgi-bin/tinyows?SERVICE=WFS&VERSION=1.1.0&REQUEST=DescribeFeatureType&typename=feature:worldwar2'
                   }),
                 optClass: 'ploomap.layer.WorldWar2',

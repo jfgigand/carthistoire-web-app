@@ -216,3 +216,27 @@ settings:
       image_url:
         label: URL image
         type: string
+
+  worldWar2:
+    attributes:
+      name:
+        label: Nom
+        type: string
+      title:
+        label: Titre
+        type: string
+      date:
+        label: Date
+        type: date
+      story:
+        label: Histoire
+        type: textarea
+      actors:
+        label: Personnages
+        type: textarea
+      image:
+        label: Source
+        type: string
+      source:
+        label: Image
+        type: string
