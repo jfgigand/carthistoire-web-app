@@ -1,4 +1,4 @@
-<tinyows online_resource="http://127.0.0.1/cgi-bin/tinyows"
+<tinyows online_resource="http://histoire.cartapatate.net/cgi-bin/tinyows"
 	 schema_dir="/usr/local/opt/tinyows/schema/">
 
   <pg host="127.0.0.1" user="tinyows" password="fsh3rdV" dbname="geo" port="5432"/>
