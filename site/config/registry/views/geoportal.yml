@@ -126,8 +126,8 @@ widgets:
       children:
         - layers
         #- overviewMap
-        - macroEditor
-        #- about
+        #- macroEditor
+        - about
         #- sideContainer2
       paneSize: 400
   macroEditor:

@@ -7,8 +7,6 @@ dojo.require('ploomap.tool.layer.Simple');
 dojo.mixin(histoire.macro.presentationAppMacro,
 {
   actions: [
-    { type: 'jig.macro.action.TextRunner', text: 'Démarrage de la démonstration...', clear: true },
-    { type: 'jig.macro.action.TimeRunner', time: 2000, pause: true },
     { type: 'jig.macro.action.TextRunner', text: "Bienvenue sur Carthistoire, l'histoire sur la carte ! ",
       clear: true, style: { fontWeight: 'bold' }, manualNext: true },
     //{ type: 'jig.macro.action.TimeRunner', time: 2000, pause: true },
@@ -25,7 +23,6 @@ dojo.mixin(histoire.macro.presentationAppMacro,
         if (layerWidget) {
           jig.workspace.highlightWidget(layerWidget, 'focus');
         }
-        this.onEnd();
       }
     },
     { type: 'jig.macro.action.TextRunner', text: "On diminue l'opacité jusqu'à 0 % ..." },
@@ -83,7 +80,7 @@ dojo.mixin(histoire.macro.presentationAppMacro,
     // Allemagne
     { type: 'ploomap.macro.action.RegionRunner', region: [ 392968, 5563995, 1081608, 5924443 ], minZoom: 5 },*/
     //{ type: 'jig.macro.action.TimeRunner', time: 4000, pause: true },
-    { type: 'jig.macro.action.TextRunner', text: 'Fin de la démonstration', clear: true, manualNext: true },
+    //{ type: 'jig.macro.action.TextRunner', text: 'Fin de la démonstration', clear: true, manualNext: true },
     { type: 'jig.macro.action.Runner',
       doPlay: function() {
         var zoomBar = this.getUniqueWidgetByClass(ploomap.OpenLayers.Control.SexyZoomBar);

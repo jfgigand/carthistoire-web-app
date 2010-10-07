@@ -31,8 +31,9 @@ dojo.declare('histoire.layerDef.Common', [ ploomap.layerDef.Base ],
       layers: [
         {
           creator: function(mapWidget) {
-            return new OpenLayers.Layer.Vector('Révolution française',
+            return new OpenLayers.Layer.Vector('revolution_francaise',
               {
+                title: "Révolution française",
                 //projection: 'EPSG:4326',
                 minResolution: 0.07464553542137146,
                 maxResolution: 76.43702827148438,
@@ -82,8 +83,9 @@ dojo.declare('histoire.layerDef.Common', [ ploomap.layerDef.Base ],
       layers: [
         {
           creator: function(mapWidget) {
-            return new OpenLayers.Layer.Vector('2<sup>nde</sup> Guerre mondiale',
+            return new OpenLayers.Layer.Vector('worldwar2',
               {
+                title: "2<sup>nde</sup> Guerre mondiale",
                 //projection: 'EPSG:4326',
                 minResolution: 256, // zoom 8
                 maxResolution: 2050, // zoom 5 (au dessus, la projection change)
