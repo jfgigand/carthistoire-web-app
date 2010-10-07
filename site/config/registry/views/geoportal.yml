@@ -124,10 +124,10 @@ widgets:
     state:
       design: headline
       children:
+        - about
         - layers
         #- overviewMap
         #- macroEditor
-        - about
         #- sideContainer2
       paneSize: 400
   macroEditor:

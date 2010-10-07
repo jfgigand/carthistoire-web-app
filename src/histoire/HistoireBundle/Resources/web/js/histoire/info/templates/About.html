@@ -4,7 +4,7 @@
   <div dojoType="dijit.layout.AccordionContainer"
        style="position:absolute;top:0;left:0;bottom:0;right:0;" dojoAttachPoint="acc">
     <div dojoType="dijit.layout.ContentPane"
-         title="Sur cette application...">
+         title="À propos de cette application...">
       <h1><span>Histoire</span> & Géographie</h1>
       <p>
         Projet IGN - Démo d'application participant au concours Géoportail 2010
@@ -25,22 +25,15 @@
         </button>
       </p>
     </div>
-    <div dojoType="dijit.layout.ContentPane" title="Histoire & Géographie">
-      <h2>La carte de la Révolution...</h2>
-      <p>
-        Cette démonstration prend l'exemple de la Révolution française pour
-        présenter ses évènements majeurs sur la carte.
-      </p>
-      <h2>... et la révolution de la carte !</h2>
-      <p>
-        Cette application donne la possibilité de visualiser tous faits historiques
-        <b>en fonction du temps</b>. On peut restreindre la période affichée,
-        ou animer dynamiquement le temps.
-      </p>
-    </div>
     <div dojoType="dijit.layout.ContentPane" title="Comment démarrer ?">
       <!--h2>Comment démarrer ?</h2-->
       <p>
+        Utilisez la case à cocher pour sélectionner une couche ou période historique.
+        Les évènements s'affichent alors sur l'échelle du temps dans le coin supérieur droit de la carte.
+        Survolez cette zone à l'aide de la souris pour qu'elle soit plus visible. Elle gardera cette
+        taille si vous cochez la case <i>garder visible</i>.
+      </p>
+      <!--p>
         Les évènements sont également affichés dans la zone au coin supérieur droit,
         où ils se placent sur la barre du temps selon leur date respective.
         Veuillez survoler cette zone par la souris pour qu'elle s'élargisse
@@ -48,7 +41,7 @@
         pour qu'elle garde sa taille).
         Le survol par le souris d'évènement sur la liste met en évidence son
         marqueur sur la carte, et vice-versa.
-      </p>
+      </p-->
       <p>
         Sur cette barre se trouvent deux curseurs qui peuvent être déplacés pour
         limités les évènements affichés sur la carte à un intervalle de temps
@@ -65,11 +58,67 @@
         détails sur l'évènement (texte, photo). Il est également possible
         de les modifier, via l'onglet <i>Éditer</i>. Enfin, la création d'un
         nouvel évènement se fait dans les <i>Couches actives</i>, via le bouton
-        <i>couche</i>, puis <i>Créer nouveau</i>. Cliquer ensuite sur la carte
-        pour poser le point.
+        avec la flèche vers le bas, puis <i>Créer nouveau</i>.
+        Cliquer ensuite sur la carte pour poser le point.
       </p>
     </div>
-    <div dojoType="dijit.layout.ContentPane" title="Utilité du service">
+    <div dojoType="dijit.layout.ContentPane" title="L'Histoire de France et sa Géographie">
+      <h2>La carte de la Révolution...</h2>
+      <p>
+        Pour cette démonstration, nous avons choisi de vous emmener au cœur des événements
+        historiques de ces deux grandes périodes de l'histoire de France, que sont la Révolution
+        et la seconde guerre mondiale.
+      </p>
+      <p>
+        Cette démonstration prend l'exemple de la Révolution française pour
+        en présenter les évènements majeurs sur la carte.
+      </p>
+      <h2>... et la révolution de la carte !</h2>
+      <p>
+        Cette application donne la possibilité de visualiser tous faits historiques
+        sur <b>l'échelle du temps</b>. On peut restreindre la période affichée,
+        ou animer le temps.
+      </p>
+    </div>
+    <div dojoType="dijit.layout.ContentPane" title="Perspective d'évolution du service">
+      <p>
+        Vous l'aurez compris, cette application propose de réunir l'histoire et la géographie au
+        cœur d'une interface interactive et dynamique.
+      </p>
+      <p>
+        Nous avons choisi de mettre en exergue la Révolution française et le Seconde Guerre
+        mondiale, ces deux périodes historiques sont en effet particulièrement populaires auprès
+        d'un large public. Il est bien entendu envisageable d'étendre cette mise en lumière à
+        bien d'autres événements de l'histoire, la plupart d'entre étant en effet parfaitement
+        géolocalisables.
+      </p>
+      <p>
+        En combinant le temps et l'espace, voir le déroulement de la Seconde Guerre mondiale,
+        des Croisades, de la Guerre de Cent ans, ou même de la Guerre des Gaules, est une
+        manière privilégiée d'approcher l'Histoire de France.
+      </p>
+    </div>
+    <div dojoType="dijit.layout.ContentPane" title="Pour quel public ?">
+      <p>
+        Dans la perspective d'un déploiement, il est tout à fait imaginable de suggérer aux
+        enseignants d'utiliser cette application, nul doute qu'ils seront séduits par son aspect
+        hautement pédagogique et attrayant.
+      </p>
+      <p>
+        Son interactivité offre de nombreuses possibilités et donne à l'application un parfaite
+        légitimité pour tenir une place importante dans les musées, les monuments et autres
+        lieux de commémoration. Les archives détenues par ces lieux de l'Histoire pourraient être
+        projetées sur écran géant et les visiteurs auraient tout loisir de «&nbsp;naviguer&nbsp;» dans les lieux
+        symboliques des périodes concernées.
+      </p>
+      <p>
+        Les offices de tourisme, qui désireraient vanter l'attrait historique de leur région pourraient
+        également être équipés de cet outil. Quel plaisir pour le touriste de planifier son parcours
+        des châteaux de la Loire en suivant l'ordre chronologique des événements qui s'y sont déroulés.
+      </p>
+      </p>
+    </div>
+    <!--div dojoType="dijit.layout.ContentPane" title="Utilité du service">
       <p>
         La Révolution française n'est qu'un exemple. La plupart des
         évènements de l'Histoire sont géolocalisables. Cette application
@@ -81,12 +130,7 @@
         de la Guerre de Cent ans, ou même de la Guerre des Gaules, est une manière privilégiée
         d'approcher l'Histoire de France.
       </p>
-      <!--p>
-        Dans le cadre du projet du Ministère de la Culture
-        pour la numérisation du patrimoine historique et culturel,
-        ce type de visualisateur valorise les informations
-      </p-->
-    </div>
+    </div-->
     <div dojoType="dijit.layout.ContentPane" title="Fonctionnalités & technologies">
       <h2>Fonctionnalités</h2>
       <ul>
