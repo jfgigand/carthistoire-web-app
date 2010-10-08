@@ -65,7 +65,6 @@ dojo.mixin(histoire.macro.presentationAppMacro,
     { type: 'jig.macro.action.Runner',
       doPlay: function() {
         var zoomBar = this.getUniqueWidgetByClass(ploomap.OpenLayers.Control.SexyZoomBar);
-        console.log('bef op magn', this, arguments);
         zoomBar.openMagnifier();
         jig.workspace.highlightWidget(zoomBar.magnifier, 'focus');
         this.onEnd();

@@ -33,7 +33,6 @@ dojo.declare('histoire.info.About', [ jig.layout._Anchor, dijit._Templated ],
   },*/
 
   sendFeedback: function() {
-    console.log('sendFeedback', this, arguments);
     var widget = jig.workspace.loadWidget(null,
       function(id) { return new jig.tool.UserFeedback; });
     jig.workspace.autoAnchorWidget(widget);

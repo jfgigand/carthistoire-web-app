@@ -19,7 +19,7 @@ a:hover, .link:hover { color: #500; }
 .jigLayoutRootPane .dijitSplitter .dijitSplitterThumb { background-color: #444; }
 .jigLayoutRootPane .dijitSplitterActive {  background-color: #fd5; }
 .jigCacoin, .jigCacoin .dijitContentPane { background-color: #cef; }
-.jigCacoin .dijitTabChecked { background-color: #eef; }
+.jigCacoin .dijitTabContainerTop-tabs div.dijitTabChecked { background-color: #cef; border-bottom-color: #cef; }
 .tundra .dijitBorderContainer-child.jigCacoin { border-color: #005; }
 .tundra .dijitBorderContainer { background-color: #ffe; }
 .jigCacoin .list .item:hover, .jigCacoin table.list > tbody > tr:hover > td { background-color: #fdc; }
@@ -28,9 +28,9 @@ a:hover, .link:hover { color: #500; }
 .jigCacoin.dijitTooltipDialog table.list > tbody > tr > td { background-color: #bef; }
 /*.jigCacoin.about { background-color: #9cf; }*/
 .olControlScaleLineTop {  background-color: #9cf; }
-.jigLayoutRootPane .dijitToasterClip { margin-left: 180px; }
+.jigLayoutRootPane .dijitToasterClip { margin-left: 200px; }
 .jigLayoutRootPane .dijitToasterContainer > .opacity { background-color: #ffa; opacity: 0.75; }
-.jigLayoutRootPane .dijitToasterContainer { width: 340px; border-top: 0; border-width: 1px; background: transparent; }
+.jigLayoutRootPane .dijitToasterContainer { width: 320px; border-top: 0; border-width: 1px; background: transparent; }
 
 
 /*

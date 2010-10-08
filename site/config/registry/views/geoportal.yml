@@ -237,9 +237,9 @@ settings:
       actors:
         label: Personnages
         type: textarea
-      image:
+      source:
         label: Source
         type: string
-      source:
+      image:
         label: Image
         type: string

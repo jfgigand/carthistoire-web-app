@@ -13,7 +13,7 @@ zig.install:
     buildscripts_dir: /home/okapi/dev/dojo/util/buildscripts
     release_name: x
     release_dir: public
-    build_version: 0.2.2
+    build_version: 0.2.5
     profileData:
       prefixes:
         - [dojo, /home/okapi/dev/dojo/dojo]
@@ -28,33 +28,53 @@ zig.install:
           name: ../workspace_default.js
           copyrightFile: '../src/cartapatate/ploomap/public/js/ploomap/copyright.txt'
           dependencies:
-            # misc deps
-            - dojo.fx.easing3
-            - dojox.io.xhrPlugins
             - jig.workspace
+            # misc deps
+            #- dojox.io.xhrPlugins
+
             - ploomap.tool.layer.Simple
             - ploomap.tool.layer.Select
-            - ploomap.layer.Simple
-            - ploomap.layer.Vector
-            - ploomap.OpenLayers.Control.TileLoadSpinner
-            - ploomap.OpenLayers.Control.SexyZoomBar
+
+            #- ploomap.layer.Simple
+            #- ploomap.layer.Vector
+            #- ploomap.OpenLayers.Control.TileLoadSpinner
+            #- ploomap.OpenLayers.Control.SexyZoomBar
             - jig.macro.Editor
+            - jig.macro.action.PresentationRunner
+            - jig.macro.action.PresentationEditor
+            - jig.macro.action.TextRunner
+            - jig.macro.action.TextEditor
+            - jig.macro.action.TimeRunner
+            - jig.macro.action.TimeEditor
+            - jig.macro.action.ScriptRunner
+            - jig.macro.action.ScriptEditor
+            - ploomap.macro.action.LayerRunner
+            - ploomap.macro.action.LayerEditor
+            - ploomap.macro.action.MapRunner
+            - ploomap.macro.action.MapEditor
+            - ploomap.macro.action.RegionRunner
+            - ploomap.macro.action.RegionEditor
+
             # application-specific
-            - ploomap.layer.HistoricalFact
-            - ploomap.layer.WorldWar2
             - histoire.layerDef.Application
+
             # initial cacoins
             - jig.layout.RootPane
             - jig.layout.BorderContainer
             - ploomap.map.Geoportal
             - ploomap.tool.Layers
             - histoire.info.About
+
+            # These must be at the end (otherwise, the page won't load :-/ )
+            - ploomap.layer.HistoricalFact
+            - ploomap.layer.WorldWar2
+
             # tools
-            - ploomap.tool.Export
-            - ploomap.tool.Measure
-            - ploomap.tool.OverviewMap
-            - ploomap.tool.StreetView
-            - ploomap.tool.Itineraries
-            - histoire.info.About
-            - jig.tool.UserFeedback
+            #- ploomap.tool.Export
+            #- ploomap.tool.Measure
+            #- ploomap.tool.OverviewMap
+            #- ploomap.tool.StreetView
+            #- ploomap.tool.Itineraries
+            #- histoire.info.About
+            #- jig.tool.UserFeedback
 
