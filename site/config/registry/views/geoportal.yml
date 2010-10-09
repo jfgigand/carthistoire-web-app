@@ -228,6 +228,14 @@ settings:
       title:
         label: Titre
         type: string
+      type:
+        label: Type
+        type: select
+        options:
+          mouvement: Mouvement de troupes
+          affrontement: Affrontement
+          camp: Camp de concentration
+          communication: Communication
       date:
         label: Date
         type: date
