@@ -24,6 +24,12 @@ packageStyles: false
 
 scripts:
   dojo: /x/dojo/dojo.js
+  checkBrowser: >-
+    if (!dojo.isFF) {
+      alert("Vous utilisez un navigateur différent de Firefox,\n" +
+            "sur lequel l'application n'a pas été testée.\n\n" +
+            "Il est donc probable qu'elle fonctionne mal ou pas du tout.");
+    }
   openlayers: /js/openlayers/build/OpenLayers.js
   ign: http://api.ign.fr/geoportail/api?v=1.1-e&amp;key=499880235241209162&amp;instance=VISU
   workspace: /x/workspace_default.js?z
