@@ -87,7 +87,7 @@ widgets:
         #- about
         #- layers
         - sideContainer
-      paneSize: 250
+      paneSize: 200
   map:
     #_class: ploomap.map.GeoportalMinimum
     _class: ploomap.map.Geoportal

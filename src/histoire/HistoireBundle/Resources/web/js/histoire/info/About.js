@@ -11,7 +11,6 @@ dojo.require('jig.tool.UserFeedback');
 dojo.require('histoire.settings');
 
 // used in code
-dojo.require('jig.macro.Player');
 dojo.require('histoire.macro.presentationAppMacro');
 dojo.require('jig.workspace');
 
@@ -40,6 +39,7 @@ dojo.declare('histoire.info.About', [ jig.layout._Anchor, dijit._Templated ],
   },
 
   startDemo: function() {
+    dojo['require']('jig.macro.Player');
     jig.macro.Player.prototype.attemptPlay(histoire.macro.presentationAppMacro);
   },
 
