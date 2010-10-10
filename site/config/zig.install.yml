@@ -39,21 +39,6 @@ zig.install:
             #- ploomap.layer.Vector
             #- ploomap.OpenLayers.Control.TileLoadSpinner
             #- ploomap.OpenLayers.Control.SexyZoomBar
-            - jig.macro.Editor
-            - jig.macro.action.PresentationRunner
-            - jig.macro.action.PresentationEditor
-            - jig.macro.action.TextRunner
-            - jig.macro.action.TextEditor
-            - jig.macro.action.TimeRunner
-            - jig.macro.action.TimeEditor
-            - jig.macro.action.ScriptRunner
-            - jig.macro.action.ScriptEditor
-            - ploomap.macro.action.LayerRunner
-            - ploomap.macro.action.LayerEditor
-            - ploomap.macro.action.MapRunner
-            - ploomap.macro.action.MapEditor
-            - ploomap.macro.action.RegionRunner
-            - ploomap.macro.action.RegionEditor
 
             # application-specific
             - histoire.layerDef.Application
@@ -68,6 +53,30 @@ zig.install:
             # These must be at the end (otherwise, the page won't load :-/ )
             - ploomap.layer.HistoricalFact
             - ploomap.layer.WorldWar2
+
+            - jig.macro.Runner
+            - jig.macro.Player
+            - jig.macro.Editor
+            - jig.macro.action.MacroRunner
+            - jig.macro.action.MacroEditor
+            - jig.macro.action.TextRunner
+            - jig.macro.action.TextEditor
+            - jig.macro.action.TimeRunner
+            - jig.macro.action.TimeEditor
+            - jig.macro.action.ScriptRunner
+            - jig.macro.action.ScriptEditor
+            - ploomap.macro.action.LayerRunner
+            - ploomap.macro.action.LayerEditor
+            - ploomap.macro.action.MapRunner
+            - ploomap.macro.action.MapEditor
+            - ploomap.macro.action.RegionRunner
+            - ploomap.macro.action.RegionEditor
+            - ploomap.presentation.sexyZoomBar.js
+            - ploomap.presentation.layers.js
+            - ploomap.presentation.featureTimeRange.js
+            - ploomap.presentation.macroEditor.js
+            - ploomap.presentation.magnifier.js
+            - ploomap.presentation.measure.js
 
             # tools
             #- ploomap.tool.Export
