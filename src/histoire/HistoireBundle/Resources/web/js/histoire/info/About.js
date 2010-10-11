@@ -38,9 +38,29 @@ dojo.declare('histoire.info.About', [ jig.layout._Anchor, dijit._Templated ],
     widget.startup();
   },
 
-  startDemo: function() {
+  startPresentation: function(event) {
+    console.log('startPresentation', this, arguments);
     dojo['require']('jig.macro.Player');
-    jig.macro.Player.prototype.attemptPlay(histoire.macro.presentationAppMacro);
+    for (var node = event.target; !node.hasAttribute('widgetid');
+         node = node.parentNode) {
+      //
+    }
+    console.log('node', node);
+    var button = dijit.byNode(node);
+    var name = button.attr('value');
+    console.log('name', name);
+    if (name) {
+      dojo['require'](name);
+      var macro = dojo.getObject(name);
+      console.log('macro', macro);
+      jig.macro.Player.prototype.attemptPlay(macro);
+    }
+  },
+
+  createPresentation: function() {
+    dojo['require']('jig.macro.Player');
+    var player = new jig.macro.Player();
+    player.actionCreate();
   },
 
 

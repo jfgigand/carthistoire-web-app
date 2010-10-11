@@ -87,7 +87,7 @@ widgets:
         #- about
         #- layers
         - sideContainer
-      paneSize: 200
+      paneSize: 280
   map:
     #_class: ploomap.map.GeoportalMinimum
     _class: ploomap.map.Geoportal
@@ -135,7 +135,7 @@ widgets:
         #- overviewMap
         #- macroEditor
         #- sideContainer2
-      paneSize: 400
+      paneSize: 200
   macroEditor:
     _class: jig.macro.Editor
   sideContainer2:
