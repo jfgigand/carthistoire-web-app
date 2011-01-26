@@ -22,7 +22,8 @@ $loader->registerNamespaces(array(
   'Zend' => '/usr/src/zf2/library',
 ));
 $loader->registerPrefixes(array(
-                                'Swift_' => '/usr/local/lib/php', //__DIR__.'/vendor/swiftmailer/lib/classes',
+       'Swift_' => '/usr/share/php',
+       //'Swift_' => '/usr/local/lib/php', //__DIR__.'/vendor/swiftmailer/lib/classes',
                                 //'Zend_'  => __DIR__.'/cartapatate/zend/library',
 ));
 $loader->register();
