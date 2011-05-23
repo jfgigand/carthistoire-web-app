@@ -14,7 +14,7 @@ dojo.declare('histoire.layerDef.Application',
                ploomap.layerDef.Default ],
 {
   // summary:
-  //   Layers for application "histoire""
+  //   Layers for application "histoire"
   //
 
 });

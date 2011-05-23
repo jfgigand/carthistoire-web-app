@@ -63,9 +63,7 @@ dojo.declare('histoire.info.About', [ jig.layout._Anchor, dijit._Templated ],
     player.actionCreate();
   },
 
-
   resize: function() {
-    //console.log('resize', this, arguments);
     try {
       this.acc.resize.apply(this.acc, arguments);
     }
@@ -73,6 +71,5 @@ dojo.declare('histoire.info.About', [ jig.layout._Anchor, dijit._Templated ],
       //console.error('exception in  resize', e);
     }
   }
-
 
 });
