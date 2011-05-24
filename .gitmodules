@@ -29,7 +29,7 @@
 	path = vendor/ploomap-server
 	url = /var/lib/git/package/ploomap-server.git
 [submodule "vendor/ploomap-client"]
- 	path = vendor/ploomap-client
+	path = vendor/ploomap-client
 	url = /var/lib/git/package/ploomap-client.git
 [submodule "vendor/monolog"]
 	path = vendor/monolog
