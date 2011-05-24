@@ -3,9 +3,13 @@
 dojo.provide('geonef.histoire.layerDef.Common');
 
 // parents
-dojo.require('ploomap.layerDef.Base');
+dojo.require('geonef.ploomap.layerDef.Base');
 
-dojo.declare('geonef.histoire.layerDef.Common', [ ploomap.layerDef.Base ],
+// usde in code
+dojo.require('geonef.ploomap.OpenLayers.Strategy.BBOX');
+dojo.require('geonef.ploomap.OpenLayers.Strategy.TimeFilter');
+
+dojo.declare('geonef.histoire.layerDef.Common', [ geonef.ploomap.layerDef.Base ],
 {
   // summary:
   //   Misc layers common to multiple Cartapatate apps
@@ -37,14 +41,14 @@ dojo.declare('geonef.histoire.layerDef.Common', [ ploomap.layerDef.Base ],
                 //projection: 'EPSG:4326',
                 minResolution: 0.07464553542137146,
                 maxResolution: 76.43702827148438,
-                strategies: [new ploomap.OpenLayers.Strategy.BBOX({ ratio: 1.0 }),
+                strategies: [new geonef.ploomap.OpenLayers.Strategy.BBOX({ ratio: 1.0 }),
                              new OpenLayers.Strategy.Save(),
-                             new ploomap.OpenLayers.Strategy.TimeFilter()],
+                             new geonef.ploomap.OpenLayers.Strategy.TimeFilter()],
                 protocol: new OpenLayers.Protocol.WFS(
                   {
                     version: '1.0.0',
-                    url: /*"http://a.wfs.cartapatate.net*/ "/cgi-bin/tinyows?",
-                    featureType: "historicalfacts",
+                    url: /*"http://a.wfs.cartapatate.net*/ "/wfs",
+                    featureType: "frenchrevolution",
                     featureNS: "http://histoire.cartapatate.net/",
                     geometryName: "wkb_geometry",
                     srsName: "EPSG:4326",
@@ -54,7 +58,7 @@ dojo.declare('geonef.histoire.layerDef.Common', [ ploomap.layerDef.Base ],
                     },
                     //schema: window.location.protocol+'//'+window.location.host+'/cgi-bin/tinyows?SERVICE=WFS&VERSION=1.1.0&REQUEST=DescribeFeatureType&typename=feature:historicalfacts'
                   }),
-                optClass: 'ploomap.layer.HistoricalFact',
+                optClass: 'geonef.ploomap.layer.HistoricalFact',
                 getFeatureTitle: function(feature) {
                   var s = '';
                   s += feature.attributes.title;
@@ -69,7 +73,7 @@ dojo.declare('geonef.histoire.layerDef.Common', [ ploomap.layerDef.Base ],
                                 'juillet', 'août', 'septembre', 'octobre', 'novembre', 'décembre'];
                   return ''+date.getDate()+' '+months[date.getMonth()]+' '+date.getFullYear();
                 },
-                sldUrl: '/res/sld/historical_facts.xml'
+                sldUrl: dojo.moduleUrl('geonef.histoire', 'style/sld/frenchrevolution.xml')
               });
           }
         }
@@ -89,13 +93,13 @@ dojo.declare('geonef.histoire.layerDef.Common', [ ploomap.layerDef.Base ],
                 //projection: 'EPSG:4326',
                 minResolution: 256, // zoom 8
                 maxResolution: 2050, // zoom 5 (au dessus, la projection change)
-                strategies: [new ploomap.OpenLayers.Strategy.BBOX({ ratio: 1.0 }),
+                strategies: [new geonef.ploomap.OpenLayers.Strategy.BBOX({ ratio: 1.0 }),
                              new OpenLayers.Strategy.Save(),
-                             new ploomap.OpenLayers.Strategy.TimeFilter()],
+                             new geonef.ploomap.OpenLayers.Strategy.TimeFilter()],
                 protocol: new OpenLayers.Protocol.WFS(
                   {
                     version: '1.0.0',
-                    url: "/cgi-bin/tinyows?",
+                    url: "/wfs",
                     featureType: "worldwar2",
                     featureNS: "http://histoire.cartapatate.net/",
                     geometryName: "wkb_geometry",
@@ -106,7 +110,7 @@ dojo.declare('geonef.histoire.layerDef.Common', [ ploomap.layerDef.Base ],
                     },
                     //schema: window.location.protocol+'//'+window.location.host+'/cgi-bin/tinyows?SERVICE=WFS&VERSION=1.1.0&REQUEST=DescribeFeatureType&typename=feature:worldwar2'
                   }),
-                optClass: 'ploomap.layer.WorldWar2',
+                optClass: 'geonef.ploomap.layer.WorldWar2',
                 getFeatureTitle: function(feature) {
                   var s = '';
                   s += feature.attributes.title;
@@ -121,7 +125,7 @@ dojo.declare('geonef.histoire.layerDef.Common', [ ploomap.layerDef.Base ],
                                 'juillet', 'août', 'septembre', 'octobre', 'novembre', 'décembre'];
                   return ''+date.getDate()+' '+months[date.getMonth()]+' '+date.getFullYear();
                 },
-                sldUrl: '/res/sld/worldwar2.xml'
+                sldUrl: dojo.moduleUrl('geonef.histoire', 'style/sld/worldwar2.xml')
               });
           }
         }

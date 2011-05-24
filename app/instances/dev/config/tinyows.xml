@@ -1,8 +1,8 @@
 <tinyows online_resource="http://histoire.cartapatate.net/cgi-bin/tinyows"
 	 schema_dir="/usr/local/opt/okapi/share/tinyows/schema/"
-         log="/home/okapi/dev/cartapatate/histoire/site/logs/tinyows.log">
+         log="/home/okapi/dev/carthistoire/dev-okapi/app/logs/tinyows.log">
 
-  <pg host="127.0.0.1" user="tinyows" password="fsh3rdV" dbname="geo-dev" port="5432"/>
+  <pg host="127.0.0.1" user="dev" password="0nuaEHA4VK" dbname="carthistoire-dev-okapi" port="5432"/>
 
   <metadata name="Service WFS pour histoire-dev"
 	    title="version de dev de l'application Concours Geoportail 2010"/>
@@ -12,18 +12,10 @@
    	   email="okapi@lapatate.org" />
 
   <layer retrievable="1"
-	 writable="0"
-	 prefix="feature"
-	 server="http://histoire.cartapatate.net/"
-         srid="900913,4326"
-         name="communes_fr"
-         title="Communes de France" />
-
-  <layer retrievable="1"
 	 writable="1"
 	 prefix="feature"
 	 server="http://histoire.cartapatate.net/"
-         name="historicalfacts"
+         name="frenchrevolution"
          title="Révolution" />
 
   <layer retrievable="1"

@@ -1,15 +1,15 @@
 #catapatate:
 #  resource: CatapatateBundle/Resources/config/routing.yml
 zig:
-  resource: ZigBundle/Resources/config/routing.yml
+  resource: @GeonefZigBundle/Resources/config/routing.yml
 ploomap:
-  resource: PloomapBundle/Resources/config/routing.yml
+  resource: @GeonefPloomapBundle/Resources/config/routing.yml
 
 homepage:
   pattern: /
-  defaults: { _controller: "ZigBundle:ViewClass:render", path: "views.geoportal" }
+  defaults: { _controller: "GeonefZigBundle:ViewClass:render", path: "views.geoportal" }
 
 workspace:
   pattern: /workspace
-  defaults: { _controller: "ZigBundle:ViewClass:render", path: "views.workspace" }
+  defaults: { _controller: "GeonefZigBundle:ViewClass:render", path: "views.workspace" }
 

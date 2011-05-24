@@ -6,6 +6,7 @@ dojo.require('dijit._Templated');
 dojo.require('geonef.jig.version');
 dojo.require('dijit.layout.AccordionContainer');
 dojo.require('geonef.jig.tool.UserFeedback');
+dojo.require('geonef.jig.button.Action');
 
 // we need to put it somewhere...
 dojo.require('geonef.histoire.settings');

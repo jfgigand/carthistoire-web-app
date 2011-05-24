@@ -1,7 +1,7 @@
 geonef_zig:
   install:
     # all paths are relative to the parameter 'kernel.root_dir'
-    manager_class: hehe  public_dir: public
+    public_dir: %kernel.cache_dir%/public
     public_mappings:
       - { location: '', directory: '../src/Geonef/HistoireBundle/Resources/public' }
       - { location: '', directory: '../vendor/cartapatate' }
