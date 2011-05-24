@@ -1,0 +1,456 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StyledLayerDescriptor version="1.0.0"
+                           xmlns="http://www.opengis.net/sld"
+                           xmlns:ogc="http://www.opengis.net/ogc"
+                           xmlns:gml="http://www.opengis.net/gml"
+                           xmlns:xlink="http://www.w3.org/1999/xlink"
+                           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                           xsi:schemaLocation="http://www.opengis.net/sld http://schemas.opengis.net/sld/1.0.0/StyledLayerDescriptor.xsd">
+
+  <!-- Style par défaut des faits historiques -->
+  <NamedLayer>
+    <Name>default</Name>
+
+    <!-- Style unique (jusqu'aujourd'hui) -->
+    <UserStyle>
+      <Name>okapi1</Name>
+
+      <IsDefault>1</IsDefault>
+
+      <!-- Un seul FeatureTypeStyle pour tous (point, ligne, polygône) -->
+      <FeatureTypeStyle>
+
+        <!-- .......... Zoom >= 15 ............-->
+        <Rule>
+          <Name>rule_15</Name>
+          <MaxScaleDenominator>6000</MaxScaleDenominator>
+
+          <PointSymbolizer>
+            <Graphic>
+              <ExternalGraphic>
+                <OnlineResource xlink:href="/lib/geonef/histoire/style/marker/frenchrevolution.png" />
+                <Format>image/png</Format>
+              </ExternalGraphic>
+              <Opacity>1</Opacity>
+              <Size>110</Size>
+
+            </Graphic>
+            <Label>
+              <ogc:PropertyName xmlns:ogc="http://www.opengis.net/ogc">name</ogc:PropertyName>
+            </Label>
+            <Font>
+              <CssParameter name="font-family">Arial</CssParameter>
+              <CssParameter name="font-size">22</CssParameter>
+
+              <CssParameter name="font-weight">bold</CssParameter>
+              <CssParameter name="font-style">italic</CssParameter>
+              <CssParameter name="stroke">#00ff00</CssParameter>
+            </Font>
+          </PointSymbolizer>
+        </Rule>
+
+        <!-- .......... Zoom 14 ..............-->
+        <Rule>
+          <Name>rule_14</Name>
+          <MinScaleDenominator>6001</MinScaleDenominator>
+          <MaxScaleDenominator>12000</MaxScaleDenominator>
+
+          <PointSymbolizer>
+            <Graphic>
+              <ExternalGraphic>
+                <OnlineResource xlink:href="/lib/geonef/histoire/style/marker/frenchrevolution.png" />
+                <Format>image/png</Format>
+              </ExternalGraphic>
+              <Opacity>1</Opacity>
+              <Size>90</Size>
+
+            </Graphic>
+            <Label>
+              <ogc:PropertyName xmlns:ogc="http://www.opengis.net/ogc">name</ogc:PropertyName>
+            </Label>
+            <Font>
+              <CssParameter name="font-family">Arial</CssParameter>
+              <CssParameter name="font-size">18</CssParameter>
+
+              <CssParameter name="font-weight">bold</CssParameter>
+              <CssParameter name="font-style">italic</CssParameter>
+              <CssParameter name="stroke">#00ff00</CssParameter>
+            </Font>
+          </PointSymbolizer>
+        </Rule>
+
+        <!-- .......... Zoom 13 ...............-->
+        <Rule>
+          <Name>rule_13</Name>
+          <MinScaleDenominator>20000</MinScaleDenominator>
+          <MaxScaleDenominator>40000</MaxScaleDenominator>
+
+          <PointSymbolizer>
+            <Graphic>
+              <ExternalGraphic>
+                <OnlineResource xlink:href="/lib/geonef/histoire/style/marker/frenchrevolution.png" />
+                <Format>image/png</Format>
+              </ExternalGraphic>
+              <Opacity>1</Opacity>
+              <Size>75</Size>
+
+            </Graphic>
+            <Label>
+              <ogc:PropertyName xmlns:ogc="http://www.opengis.net/ogc">name</ogc:PropertyName>
+            </Label>
+            <Font>
+              <CssParameter name="font-family">Arial</CssParameter>
+              <CssParameter name="font-size">16</CssParameter>
+
+              <CssParameter name="font-weight">bold</CssParameter>
+              <CssParameter name="font-style">italic</CssParameter>
+              <CssParameter name="stroke">#00ff00</CssParameter>
+            </Font>
+          </PointSymbolizer>
+        </Rule>
+
+        <!-- .......... Zoom 12 ...............-->
+        <Rule>
+          <Name>rule_12</Name>
+          <MinScaleDenominator>40001</MinScaleDenominator>
+          <MaxScaleDenominator>90000</MaxScaleDenominator>
+
+          <PointSymbolizer>
+            <Graphic>
+              <ExternalGraphic>
+                <OnlineResource xlink:href="/lib/geonef/histoire/style/marker/frenchrevolution.png" />
+                <Format>image/png</Format>
+              </ExternalGraphic>
+              <Opacity>1</Opacity>
+              <Size>55</Size>
+
+            </Graphic>
+            <Label>
+              <ogc:PropertyName xmlns:ogc="http://www.opengis.net/ogc">name</ogc:PropertyName>
+            </Label>
+            <Font>
+              <CssParameter name="font-family">Arial</CssParameter>
+              <CssParameter name="font-size">14</CssParameter>
+
+              <CssParameter name="font-weight">bold</CssParameter>
+              <CssParameter name="font-style">italic</CssParameter>
+              <CssParameter name="stroke">#00ff00</CssParameter>
+            </Font>
+          </PointSymbolizer>
+        </Rule>
+
+	<!-- .......... Zoom < 12 ...............-->
+        <Rule>
+          <Name>rule_inf</Name>
+          <MinScaleDenominator>90001</MinScaleDenominator>
+          <PointSymbolizer>
+            <Graphic>
+              <ExternalGraphic>
+                <OnlineResource xlink:href="/lib/geonef/histoire/style/marker/frenchrevolution.png" />
+                <Format>image/png</Format>
+
+              </ExternalGraphic>
+              <Opacity>1</Opacity>
+              <Size>42</Size>
+            </Graphic>
+            <Label>
+              <ogc:PropertyName xmlns:ogc="http://www.opengis.net/ogc">name</ogc:PropertyName>
+            </Label>
+
+            <Font>
+              <CssParameter name="font-family">Arial</CssParameter>
+              <CssParameter name="font-size">12</CssParameter>
+              <CssParameter name="font-weight">bold</CssParameter>
+              <CssParameter name="font-style">italic</CssParameter>
+              <CssParameter name="stroke">#00ff00</CssParameter>
+
+            </Font>
+          </PointSymbolizer>
+        </Rule>
+
+      </FeatureTypeStyle>
+    </UserStyle>
+  </NamedLayer>
+
+  <!--
+     *************************************************************************
+                                    SELECT
+    -->
+
+  <NamedLayer>
+    <Name>select</Name>
+    <!-- Style unique (jusqu'aujourd'hui) -->
+    <UserStyle>
+      <Name>okapi1</Name>
+      <IsDefault>1</IsDefault>
+
+      <!-- Un seul FeatureTypeStyle pour tous (point, ligne, polygône) -->
+
+      <FeatureTypeStyle>
+
+	<!-- Type : Lieu -->
+
+        <!-- .......... Zoom >= 15 ...............-->
+        <Rule>
+          <Name>rule_sel_15</Name>
+          <MaxScaleDenominator>6000</MaxScaleDenominator>
+
+          <PointSymbolizer>
+            <Graphic>
+
+              <ExternalGraphic>
+                <OnlineResource xlink:href="/lib/geonef/histoire/style/marker/frenchrevolution.png" />
+                <Format>image/png</Format>
+              </ExternalGraphic>
+              <Opacity>1</Opacity>
+              <Size>115</Size>
+            </Graphic>
+            <Font>
+              <CssParameter name="font-size">23</CssParameter>
+              <CssParameter name="font-weight">bold</CssParameter>
+            </Font>
+
+          </PointSymbolizer>
+        </Rule>
+
+        <!-- .......... Zoom 14 ...............-->
+        <Rule>
+          <Name>rule_sel_14</Name>
+          <MinScaleDenominator>6001</MinScaleDenominator>
+          <MaxScaleDenominator>12000</MaxScaleDenominator>
+
+          <PointSymbolizer>
+            <Graphic>
+
+              <ExternalGraphic>
+                <OnlineResource xlink:href="/lib/geonef/histoire/style/marker/frenchrevolution.png" />
+                <Format>image/png</Format>
+              </ExternalGraphic>
+              <Opacity>1</Opacity>
+              <Size>100</Size>
+            </Graphic>
+            <Font>
+              <CssParameter name="font-size">20</CssParameter>
+              <CssParameter name="font-weight">bold</CssParameter>
+            </Font>
+
+          </PointSymbolizer>
+        </Rule>
+
+        <!-- .......... Zoom 13 ...............-->
+        <Rule>
+          <Name>rule_sel_13</Name>
+          <MinScaleDenominator>20000</MinScaleDenominator>
+          <MaxScaleDenominator>40000</MaxScaleDenominator>
+
+          <PointSymbolizer>
+            <Graphic>
+
+              <ExternalGraphic>
+                <OnlineResource xlink:href="/lib/geonef/histoire/style/marker/frenchrevolution.png" />
+                <Format>image/png</Format>
+              </ExternalGraphic>
+              <Opacity>1</Opacity>
+              <Size>80</Size>
+            </Graphic>
+            <Font>
+              <CssParameter name="font-size">18</CssParameter>
+              <CssParameter name="font-weight">bold</CssParameter>
+            </Font>
+
+          </PointSymbolizer>
+        </Rule>
+
+        <!-- .......... Zoom 12 ...............-->
+        <Rule>
+          <Name>rule_sel_12</Name>
+          <MinScaleDenominator>40001</MinScaleDenominator>
+          <MaxScaleDenominator>90000</MaxScaleDenominator>
+
+          <PointSymbolizer>
+            <Graphic>
+
+              <ExternalGraphic>
+                <OnlineResource xlink:href="/lib/geonef/histoire/style/marker/frenchrevolution.png" />
+                <Format>image/png</Format>
+              </ExternalGraphic>
+              <Opacity>1</Opacity>
+              <Size>75</Size>
+            </Graphic>
+            <Font>
+              <CssParameter name="font-size">16</CssParameter>
+              <CssParameter name="font-weight">bold</CssParameter>
+            </Font>
+
+          </PointSymbolizer>
+        </Rule>
+
+        <!-- .......... Zoom < 12 ...............-->
+        <Rule>
+          <Name>rule_sel_inf</Name>
+          <MinScaleDenominator>90001</MinScaleDenominator>
+
+          <PointSymbolizer>
+            <Graphic>
+
+              <ExternalGraphic>
+                <OnlineResource xlink:href="/lib/geonef/histoire/style/marker/frenchrevolution.png" />
+                <Format>image/png</Format>
+              </ExternalGraphic>
+              <Opacity>1</Opacity>
+              <Size>50</Size>
+            </Graphic>
+            <Font>
+              <CssParameter name="font-size">14</CssParameter>
+              <CssParameter name="font-weight">bold</CssParameter>
+            </Font>
+
+          </PointSymbolizer>
+        </Rule>
+
+      </FeatureTypeStyle>
+    </UserStyle>
+  </NamedLayer>
+
+  <!--
+     *************************************************************************
+                                         HOVER
+    -->
+
+  <NamedLayer>
+    <Name>hover</Name>
+
+    <!-- Style unique (jusqu'aujourd'hui) -->
+    <UserStyle>
+      <Name>okapi1</Name>
+      <IsDefault>1</IsDefault>
+
+      <!-- Un seul FeatureTypeStyle pour tous (point, ligne, polygône) -->
+      <FeatureTypeStyle>
+
+	<!-- Type : Lieu -->
+
+        <!-- .......... Zoom >= 15 ...............-->
+        <Rule>
+          <Name>rule_hov_15</Name>
+          <MaxScaleDenominator>6000</MaxScaleDenominator>
+
+          <PointSymbolizer>
+            <Graphic>
+              <ExternalGraphic>
+                <OnlineResource xlink:href="/lib/geonef/histoire/style/marker/frenchrevolution.png" />
+                <Format>image/png</Format>
+
+              </ExternalGraphic>
+              <Opacity>1</Opacity>
+              <Size>115</Size>
+            </Graphic>
+            <Font>
+              <CssParameter name="font-size">23</CssParameter>
+              <CssParameter name="font-weight">bold</CssParameter>
+            </Font>
+
+          </PointSymbolizer>
+        </Rule>
+
+        <!-- .......... Zoom 14 ...............-->
+        <Rule>
+          <Name>rule_hov_14</Name>
+          <MinScaleDenominator>6001</MinScaleDenominator>
+          <MaxScaleDenominator>12000</MaxScaleDenominator>
+
+          <PointSymbolizer>
+            <Graphic>
+              <ExternalGraphic>
+                <OnlineResource xlink:href="/lib/geonef/histoire/style/marker/frenchrevolution.png" />
+                <Format>image/png</Format>
+
+              </ExternalGraphic>
+              <Opacity>1</Opacity>
+              <Size>100</Size>
+            </Graphic>
+            <Font>
+              <CssParameter name="font-size">20</CssParameter>
+              <CssParameter name="font-weight">bold</CssParameter>
+            </Font>
+
+          </PointSymbolizer>
+        </Rule>
+
+        <!-- .......... Zoom 13 ...............-->
+        <Rule>
+          <Name>rule_hov_13</Name>
+          <MinScaleDenominator>20000</MinScaleDenominator>
+          <MaxScaleDenominator>40000</MaxScaleDenominator>
+
+          <PointSymbolizer>
+            <Graphic>
+              <ExternalGraphic>
+                <OnlineResource xlink:href="/lib/geonef/histoire/style/marker/frenchrevolution.png" />
+                <Format>image/png</Format>
+
+              </ExternalGraphic>
+              <Opacity>1</Opacity>
+              <Size>80</Size>
+            </Graphic>
+            <Font>
+              <CssParameter name="font-size">18</CssParameter>
+              <CssParameter name="font-weight">bold</CssParameter>
+            </Font>
+
+          </PointSymbolizer>
+        </Rule>
+
+        <!-- .......... Zoom 12 ...............-->
+        <Rule>
+          <Name>rule_hov_12</Name>
+          <MinScaleDenominator>40001</MinScaleDenominator>
+          <MaxScaleDenominator>90000</MaxScaleDenominator>
+          <PointSymbolizer>
+            <Graphic>
+              <ExternalGraphic>
+                <OnlineResource xlink:href="/lib/geonef/histoire/style/marker/frenchrevolution.png" />
+                <Format>image/png</Format>
+
+              </ExternalGraphic>
+              <Opacity>1</Opacity>
+              <Size>75</Size>
+            </Graphic>
+            <Font>
+              <CssParameter name="font-size">16</CssParameter>
+              <CssParameter name="font-weight">bold</CssParameter>
+            </Font>
+
+          </PointSymbolizer>
+        </Rule>
+
+	<!-- .......... Zoom < 12 ...............-->
+
+        <Rule>
+          <Name>rule_hov_inf</Name>
+          <MinScaleDenominator>90001</MinScaleDenominator>
+          <PointSymbolizer>
+            <Graphic>
+              <ExternalGraphic>
+
+                <OnlineResource xlink:href="/lib/geonef/histoire/style/marker/frenchrevolution.png" />
+                <Format>image/png</Format>
+
+              </ExternalGraphic>
+              <Opacity>1</Opacity>
+              <Size>50</Size>
+            </Graphic>
+            <Font>
+              <CssParameter name="font-size">14</CssParameter>
+              <CssParameter name="font-weight">bold</CssParameter>
+            </Font>
+
+          </PointSymbolizer>
+        </Rule>
+
+
+      </FeatureTypeStyle>
+    </UserStyle>
+  </NamedLayer>
+
+</StyledLayerDescriptor>
