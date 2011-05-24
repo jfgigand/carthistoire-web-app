@@ -18,80 +18,80 @@
 //                      - des réglages propres au type
 //
 //      - les types concrets d'action sont des widgets héritant
-//        de jig.guide.Action
-//      - jig.guide.Action gère le DnD, le label...
+//        de geonef.jig.guide.Action
+//      - geonef.jig.guide.Action gère le DnD, le label...
 //        l'instanciation du DropDownButton
 //      - les widgets concrets déclarent le DropDownButton
 //        en simple <div dojoAttachPoint="dropDownButton"></div>
 //
 // Animator:
-//      - jig.guide.Animator
+//      - geonef.jig.guide.Animator
 //      - à faire en premier
 //      - chaque type d'action est : function? class?
 //
-// ploomap.guide.action.Layer
-// ploomap.guide.actionEditor.Layer
+// geonef.ploomap.guide.action.Layer
+// geonef.ploomap.guide.actionEditor.Layer
 //
 
 dojo.provide('ign.macro.testMacro');
 
-dojo.require('ploomap.OpenLayers.Control.SexyZoomBar');
+dojo.require('geonef.ploomap.OpenLayers.Control.SexyZoomBar');
 
 dojo.mixin(ign.macro.testMacro,
 {
   actions: [
     {
-      type: 'jig.macro.action.TextRunner',
+      type: 'geonef.jig.macro.action.TextRunner',
       text: 'La démonstration commence ...',
       alone: false      // replace any previous text
     },
     {
-      type: 'jig.macro.action.TimeRunner',
+      type: 'geonef.jig.macro.action.TimeRunner',
       time: 1000, // milliseconds
       pause: true
     },
     {
-      type: 'jig.macro.action.TextRunner',
+      type: 'geonef.jig.macro.action.TextRunner',
       text: "On affiche la barre de zoom"
     },
     {
-      type: 'jig.macro.action.Runner',
+      type: 'geonef.jig.macro.action.Runner',
       doPlay: function() {
         console.log('my doPlay!' , this, arguments);
-        var zoomBar = this.getUniqueWidgetByClass(ploomap.OpenLayers.Control.SexyZoomBar);
+        var zoomBar = this.getUniqueWidgetByClass(geonef.ploomap.OpenLayers.Control.SexyZoomBar);
         console.log('zoomBar', zoomBar);
         zoomBar.attr('forceAlternateLayout', true);
-        jig.workspace.highlightWidget(zoomBar, 'focus');
+        geonef.jig.workspace.highlightWidget(zoomBar, 'focus');
         this.onEnd();
       }
     },
     {
-      type: 'jig.macro.action.TimeRunner',
+      type: 'geonef.jig.macro.action.TimeRunner',
       time: 1000, // milliseconds
       pause: true
     },
     {
-      type: 'jig.macro.action.TextRunner',
+      type: 'geonef.jig.macro.action.TextRunner',
       text: "... et la loupe !"
     },
     {
-      type: 'jig.macro.action.Runner',
+      type: 'geonef.jig.macro.action.Runner',
       doPlay: function() {
-        var zoomBar = this.getUniqueWidgetByClass(ploomap.OpenLayers.Control.SexyZoomBar);
+        var zoomBar = this.getUniqueWidgetByClass(geonef.ploomap.OpenLayers.Control.SexyZoomBar);
         zoomBar.openMagnifier();
-        jig.workspace.highlightWidget(zoomBar.magnifier, 'focus');
+        geonef.jig.workspace.highlightWidget(zoomBar.magnifier, 'focus');
         this.onEnd();
       }
     },
     {
-      type: 'jig.macro.action.TimeRunner',
+      type: 'geonef.jig.macro.action.TimeRunner',
       time: 1000, // milliseconds
       pause: true
     },
     {
-      type: 'jig.macro.action.Runner',
+      type: 'geonef.jig.macro.action.Runner',
       doPlay: function() {
-        var zoomBar = this.getUniqueWidgetByClass(ploomap.OpenLayers.Control.SexyZoomBar);
+        var zoomBar = this.getUniqueWidgetByClass(geonef.ploomap.OpenLayers.Control.SexyZoomBar);
         zoomBar.attr('forceAlternateLayout', false);
         if (zoomBar.magnifier) {
           zoomBar.magnifier.destroy();
@@ -101,42 +101,42 @@ dojo.mixin(ign.macro.testMacro,
       }
     },
     {
-      type: 'jig.macro.action.TextRunner',
+      type: 'geonef.jig.macro.action.TextRunner',
       text: "La Suisse, l'Autriche, la Slovénie...",
       alone: true
     },
     {
-      type: 'ploomap.macro.action.RegionRunner',
+      type: 'geonef.ploomap.macro.action.RegionRunner',
       region: [ 496392, 5078619, 1185032, 5439067 ], // Suisse-Autriche-Slovénie
       minZoom: 5
       //duration: 600     // miliseconds
     },
     {
-      type: 'jig.macro.action.TimeRunner',
+      type: 'geonef.jig.macro.action.TimeRunner',
       time: 3000, // milliseconds
       pause: true
     },
     {
-      type: 'jig.macro.action.TextRunner',
+      type: 'geonef.jig.macro.action.TextRunner',
       text: "L'Allemagne !",
       alone: false      // replace any previous text
     },
     {
-      type: 'ploomap.macro.action.RegionRunner',
+      type: 'geonef.ploomap.macro.action.RegionRunner',
       region: [ 392968, 5563995, 1081608, 5924443 ], // Allemagne
       minZoom: 5
       //duration: 600     // miliseconds
     },
     {
-      type: 'jig.macro.action.TimeRunner',
+      type: 'geonef.jig.macro.action.TimeRunner',
       time: 3000, // milliseconds
       pause: true
     },
     {
-      type: 'jig.macro.action.TextRunner',
+      type: 'geonef.jig.macro.action.TextRunner',
       text: 'Fin de la démonstration',
       alone: true      // replace any previous text
-    }, // ploomap.macro.action.RegionRunner
+    }, // geonef.ploomap.macro.action.RegionRunner
 
     /*{
       type: 'layer',

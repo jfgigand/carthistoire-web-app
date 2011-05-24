@@ -1,89 +1,100 @@
-zig.install:
-  # all paths are relative to the parameter 'kernel.root_dir'
-  manager_class: hehe
-  public_dir: public
-  public_mappings:
-    - { location: '', directory: '../src/histoire/HistoireBundle/Resources/web' }
-    - { location: '', directory: '../src/cartapatate/cartapatate/public' }
-    - { location: '', directory: '../src/cartapatate/ploomap/public' }
-    - { location: 'js', directory: '../src/cartapatate/zig/res/js' }
-    - { location: 'images/openlayers', directory: '../src/cartapatate/ploomap/public/js/openlayers/img' }
+geonef_zig:
+  install:
+    # all paths are relative to the parameter 'kernel.root_dir'
+    manager_class: hehe  public_dir: public
+    public_mappings:
+      - { location: '', directory: '../src/Geonef/HistoireBundle/Resources/public' }
+      - { location: '', directory: '../vendor/cartapatate' }
+      - { location: 'lib', directory: '../vendor/ploomap-client/src' }
+      - { location: 'lib', directory: '../vendor/jig/src' }
+      - { location: 'images/openlayers', directory: '../vendor/ploomap-client/src/geonef/ploomap/style/openlayers' }
+      - { location: 'images/openlayers', directory: '../vendor/openlayers/img' }
+      - { location: 'lib/openlayers', directory: '../vendor/openlayers' }
+      - { location: 'lib/proj4js', directory: '../vendor/proj4js' }
+      - { location: 'lib/dojo', directory: '../vendor/dojo-release/dojo' }
+      - { location: 'lib/dijit', directory: '../vendor/dojo-release/dijit' }
+      - { location: 'lib/dojox', directory: '../vendor/dojo-release/dojox' }
 
-  shrinksafe:
-    buildscripts_dir: /home/okapi/dev/dojo/util/buildscripts
-    release_name: x
-    release_dir: public
-    build_version: 0.2.5
-    profileData:
-      prefixes:
-        - [dojo, /home/okapi/dev/dojo/dojo]
-        - [dijit, /home/okapi/dev/dojo/dijit]
-        - [dojox, /home/okapi/dev/dojo/dojox]
-        - [jig, public/js/jig]
-        - [ploomap, public/js/ploomap]
-        - [cartapatate, public/js/cartapatate]
-        - [histoire, public/js/histoire]
-      layers:
-        -
-          name: ../workspace_default.js
-          copyrightFile: '../src/cartapatate/ploomap/public/js/ploomap/copyright.txt'
-          dependencies:
-            - jig.workspace
-            # misc deps
-            #- dojox.io.xhrPlugins
+    shrinksafe:
+      buildscripts_dir: ../vendor/dojo-release/util/buildscripts
+      release_name: x
+      release_dir: %kernel.cache_dir%/public
+      build_version: 0.3.0
+      profileData:
+        prefixes:
+          - { ns: dojo, path: %kernel.cache_dir%/public/lib/dojo }
+          - { ns: dijit, path: %kernel.cache_dir%/public/lib/dijit }
+          - { ns: dojox, path: %kernel.cache_dir%/public/lib/dojox }
+          - { ns: cartapatate, path: %kernel.cache_dir%/public/lib/cartapatate }
+          - { ns: geonef, path: %kernel.cache_dir%/public/lib/geonef }
+          - { ns: package, path: %kernel.cache_dir%/public/lib/package }
+        layers:
+          -
+            name: ../application.js
+            copyrightFile: '../vendor/ploomap-client/src/geonef/ploomap/copyright.txt'
+            dependencies:
+              - cartapatate.start.loadWorkspace
+              - package.application
+          # -
+          #   name: ../workspace_default.js
+          #   copyrightFile: '../src/cartapatate/ploomap/public/js/ploomap/copyright.txt'
+          #   dependencies:
+          #     - jig.workspace
+          #     # misc deps
+          #     #- dojox.io.xhrPlugins
 
-            - ploomap.tool.layer.Simple
-            - ploomap.tool.layer.Select
+          #     - ploomap.tool.layer.Simple
+          #     - ploomap.tool.layer.Select
 
-            #- ploomap.layer.Simple
-            #- ploomap.layer.Vector
-            #- ploomap.OpenLayers.Control.TileLoadSpinner
-            #- ploomap.OpenLayers.Control.SexyZoomBar
+          #     #- ploomap.layer.Simple
+          #     #- ploomap.layer.Vector
+          #     #- ploomap.OpenLayers.Control.TileLoadSpinner
+          #     #- ploomap.OpenLayers.Control.SexyZoomBar
 
-            # application-specific
-            - histoire.layerDef.Application
+          #     # application-specific
+          #     - histoire.layerDef.Application
 
-            # initial cacoins
-            - jig.layout.RootPane
-            - jig.layout.BorderContainer
-            - ploomap.map.Geoportal
-            - ploomap.tool.Layers
-            - histoire.info.About
+          #     # initial cacoins
+          #     - jig.layout.RootPane
+          #     - jig.layout.BorderContainer
+          #     - ploomap.map.Geoportal
+          #     - ploomap.tool.Layers
+          #     - histoire.info.About
 
-            # These must be at the end (otherwise, the page won't load :-/ )
-            - ploomap.layer.HistoricalFact
-            - ploomap.layer.WorldWar2
+          #     # These must be at the end (otherwise, the page won't load :-/ )
+          #     - ploomap.layer.HistoricalFact
+          #     - ploomap.layer.WorldWar2
 
-            - jig.macro.Runner
-            - jig.macro.Player
-            - jig.macro.Editor
-            - jig.macro.action.MacroRunner
-            - jig.macro.action.MacroEditor
-            - jig.macro.action.TextRunner
-            - jig.macro.action.TextEditor
-            - jig.macro.action.TimeRunner
-            - jig.macro.action.TimeEditor
-            - jig.macro.action.ScriptRunner
-            - jig.macro.action.ScriptEditor
-            - ploomap.macro.action.LayerRunner
-            - ploomap.macro.action.LayerEditor
-            - ploomap.macro.action.MapRunner
-            - ploomap.macro.action.MapEditor
-            - ploomap.macro.action.RegionRunner
-            - ploomap.macro.action.RegionEditor
-            - ploomap.presentation.sexyZoomBar.js
-            - ploomap.presentation.layers.js
-            - ploomap.presentation.featureTimeRange.js
-            - ploomap.presentation.macroEditor.js
-            - ploomap.presentation.magnifier.js
-            - ploomap.presentation.measure.js
+          #     - jig.macro.Runner
+          #     - jig.macro.Player
+          #     - jig.macro.Editor
+          #     - jig.macro.action.MacroRunner
+          #     - jig.macro.action.MacroEditor
+          #     - jig.macro.action.TextRunner
+          #     - jig.macro.action.TextEditor
+          #     - jig.macro.action.TimeRunner
+          #     - jig.macro.action.TimeEditor
+          #     - jig.macro.action.ScriptRunner
+          #     - jig.macro.action.ScriptEditor
+          #     - ploomap.macro.action.LayerRunner
+          #     - ploomap.macro.action.LayerEditor
+          #     - ploomap.macro.action.MapRunner
+          #     - ploomap.macro.action.MapEditor
+          #     - ploomap.macro.action.RegionRunner
+          #     - ploomap.macro.action.RegionEditor
+          #     - ploomap.presentation.sexyZoomBar.js
+          #     - ploomap.presentation.layers.js
+          #     - ploomap.presentation.featureTimeRange.js
+          #     - ploomap.presentation.macroEditor.js
+          #     - ploomap.presentation.magnifier.js
+          #     - ploomap.presentation.measure.js
 
-            # tools
-            #- ploomap.tool.Export
-            #- ploomap.tool.Measure
-            #- ploomap.tool.OverviewMap
-            #- ploomap.tool.StreetView
-            #- ploomap.tool.Itineraries
-            #- histoire.info.About
-            #- jig.tool.UserFeedback
+          #     # tools
+          #     #- ploomap.tool.Export
+          #     #- ploomap.tool.Measure
+          #     #- ploomap.tool.OverviewMap
+          #     #- ploomap.tool.StreetView
+          #     #- ploomap.tool.Itineraries
+          #     #- histoire.info.About
+          #     #- jig.tool.UserFeedback
 

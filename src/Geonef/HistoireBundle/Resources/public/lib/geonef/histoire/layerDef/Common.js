@@ -1,11 +1,11 @@
 
 
-dojo.provide('histoire.layerDef.Common');
+dojo.provide('geonef.histoire.layerDef.Common');
 
 // parents
 dojo.require('ploomap.layerDef.Base');
 
-dojo.declare('histoire.layerDef.Common', [ ploomap.layerDef.Base ],
+dojo.declare('geonef.histoire.layerDef.Common', [ ploomap.layerDef.Base ],
 {
   // summary:
   //   Misc layers common to multiple Cartapatate apps

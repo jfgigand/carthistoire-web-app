@@ -1,23 +1,11 @@
 <?php
 
-require_once __DIR__.'/../src/autoload.php';
-//require_once __DIR__.'/../src/cartapatate/symfony/src/Symfony/Foundation/bootstrap.php';
+require_once __DIR__.'/autoload.php';
 
-use Symfony\Framework\Kernel as BaseKernel;
-use Symfony\Component\DependencyInjection\Loader\LoaderInterface;
+use Symfony\Component\HttpKernel\Kernel;
+use Symfony\Component\Config\Loader\LoaderInterface;
 
-use Symfony\Framework\KernelBundle;
-use Symfony\Bundle\FrameworkBundle\FrameworkBundle;
-use Symfony\Bundle\ZendBundle\ZendBundle;
-use Symfony\Bundle\DoctrineBundle\DoctrineBundle;
-use Symfony\Bundle\SwiftmailerBundle\SwiftmailerBundle;
-use Symfony\Bundle\DoctrineMongoDBBundle\DoctrineMongoDBBundle;
-
-use Zig\Bundle\ZigBundle\ZigBundle;
-use Ploomap\Bundle\PloomapBundle\PloomapBundle;
-use HistoireBundle\HistoireBundle;
-
-class Kernel extends BaseKernel
+class AppKernel extends Kernel
 {
   /**
    * Overloaded, only to provide an app name
@@ -25,7 +13,7 @@ class Kernel extends BaseKernel
   public function __construct($environment, $debug)
   {
     parent::__construct($environment, $debug);
-    $this->name = 'histoire';
+    $this->name = 'carthistoire';
   }
 
   public function registerRootDir()
@@ -35,38 +23,28 @@ class Kernel extends BaseKernel
 
   public function registerBundles()
   {
-    $bundles = array(
-                     // essential bundles
-                     new KernelBundle(),
-                     new FrameworkBundle(),
+        $bundles = array(
+            new Symfony\Bundle\FrameworkBundle\FrameworkBundle(),
+            new Symfony\Bundle\SecurityBundle\SecurityBundle(),
+            new Symfony\Bundle\TwigBundle\TwigBundle(),
+            new Symfony\Bundle\MonologBundle\MonologBundle(),
+            new Symfony\Bundle\SwiftmailerBundle\SwiftmailerBundle(),
+            //new Symfony\Bundle\DoctrineBundle\DoctrineBundle(),
+            new Symfony\Bundle\DoctrineMongoDBBundle\DoctrineMongoDBBundle(),
+            //new Symfony\Bundle\AsseticBundle\AsseticBundle(),
+            //new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
+            new Geonef\ZigBundle\GeonefZigBundle(),
+            new Geonef\PgLinkBundle\GeonefPgLinkBundle(),
+            new Geonef\PloomapBundle\GeonefPloomapBundle(),
+            new Geonef\HistoireBundle\GeonefHistoireBundle(),
+        );
 
-                     // third-party : Symfony-related
-                     new ZendBundle(),
-                     new SwiftmailerBundle(),
-                     new DoctrineBundle(),
-                     //new DoctrineMigrationsBundle(),
-                     new DoctrineMongoDBBundle(),
+        if (in_array($this->getEnvironment(), array('dev', 'test'))) {
+            $bundles[] = new Symfony\Bundle\WebProfilerBundle\WebProfilerBundle();
+            //$bundles[] = new Symfony\Bundle\WebConfiguratorBundle\SymfonyWebConfiguratorBundle();
+        }
 
-                     // third-party : my owns
-                     new ZigBundle(),
-                     new PloomapBundle(),
-                     new HistoireBundle(),
-                     );
-    if ($this->isDebug()) {
-      $bundles[] = new Symfony\Bundle\WebProfilerBundle\WebProfilerBundle();
-    }
-
-    return $bundles;
-  }
-
-  public function registerBundleDirs()
-  {
-    return array(
-                 'HistoireBundle'           => __DIR__.'/../src/histoire',
-                 'Symfony\\Bundle' => __DIR__.'/../src/cartapatate/symfony/src/Symfony/Bundle',
-                 'Zig\\Bundle'     => __DIR__.'/../src/cartapatate/zig/lib/Zig/Bundle',
-                 'Ploomap\\Bundle'     => __DIR__.'/../src/cartapatate/ploomap/lib/Ploomap/Bundle',
-                 );
+        return $bundles;
   }
 
   public function registerContainerConfiguration(LoaderInterface $loader)

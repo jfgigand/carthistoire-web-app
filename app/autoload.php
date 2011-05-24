@@ -1,32 +1,35 @@
 <?php
 
-require_once __DIR__.'/cartapatate/symfony/src/Symfony/Framework/UniversalClassLoader.php';
-//require_once __DIR__.'/cartapatate/symfony/src/Symfony/Component/HttpKernel/ClassCollectionLoader.php';
+$__lib_dir = __DIR__.'/../vendor';
+require_once $__lib_dir.'/symfony/src/Symfony/Component/ClassLoader/UniversalClassLoader.php';
 
-//use Symfony\Component\HttpKernel\ClassCollectionLoader;
-use Symfony\Framework\UniversalClassLoader;
+use Symfony\Component\ClassLoader\UniversalClassLoader;
 
-//$loader = new ClassCollectionLoader();
 $loader = new UniversalClassLoader();
 $loader->registerNamespaces(array(
-  'Symfony'     => __DIR__.'/cartapatate/symfony/src',
-  'Doctrine\\Common'    => __DIR__.'/cartapatate/doctrine2-common/lib',
-  'Doctrine\\DBAL'    => __DIR__.'/cartapatate/doctrine2-dbal/lib',
-  'Doctrine\\ORM'    => __DIR__.'/cartapatate/doctrine2-orm/lib',
-  'Doctrine\\ODM'    => __DIR__.'/cartapatate/doctrine-mongodb-odm/lib',
-  //'Bundle\\DoctrineMongoDBBundle' => __DIR__.'/cartapatate/doctrine-mongodb-bundle',
-  'Zig'         => __DIR__.'/cartapatate/zig/lib',
-  'Ploomap'     => __DIR__.'/cartapatate/ploomap/lib',
-  'HistoireBundle' => __DIR__.'/histoire',
-  //'Zend' => __DIR__.'/cartapatate/compat/lib',
-  'Zend' => '/usr/src/zf2/library',
+  'Symfony'     => $__lib_dir.'/symfony/src',
+  'Symfony\\Bundle\\DoctrineMongoDBBundle' => $__lib_dir.'/bundles',
+  'Doctrine\\Common'    => $__lib_dir.'/doctrine-common/lib',
+  'Doctrine\\DBAL'    => $__lib_dir.'/doctrine-dbal/lib',
+  'Doctrine\\ORM'    => $__lib_dir.'/doctrine-orm/lib',
+  'Doctrine\\ODM'    => $__lib_dir.'/doctrine-mongodb-odm/lib',
+  'Doctrine\\MongoDB' => $__lib_dir.'/doctrine-mongodb/lib',
+  'Monolog'           => $__lib_dir.'/monolog/src',
+  'Geonef\\Zig'         => $__lib_dir.'/zig/src',
+  'Geonef\\ZigBundle'     => $__lib_dir.'/zig/src',
+  'Geonef\\PgLinkBundle'     => $__lib_dir.'/zig/src',
+  'Geonef\\Ploomap'     => $__lib_dir.'/ploomap-server/src',
+  'Geonef\\PloomapBundle' => $__lib_dir.'/ploomap-server/src',
+  'Geonef\\HistoireBundle' => $__lib_dir.'/../src',
+  //'Zend' => '/usr/src/zf2/library',
 ));
-$loader->registerPrefixes(array(
+$loader->registerPrefixes
+(array(
+       'Twig_' => $__lib_dir.'/twig/lib',
        'Swift_' => '/usr/share/php',
-       //'Swift_' => '/usr/local/lib/php', //__DIR__.'/vendor/swiftmailer/lib/classes',
-                                //'Zend_'  => __DIR__.'/cartapatate/zend/library',
-));
+       //'Zend_'  => $__lib_dir.'/cartapatate/zend/library',
+       ));
 $loader->register();
 
 // for Zend Framework & SwiftMailer
-set_include_path(__DIR__.'/cartapatate/zend/library'.PATH_SEPARATOR/*.__DIR__.'/vendor/swiftmailer/lib'.PATH_SEPARATOR*/.get_include_path());
+/* set_include_path($__lib_dir.'/zend/library'.PATH_SEPARATOR/\*.$__lib_dir.'/vendor/swiftmailer/lib'.PATH_SEPARATOR*\/.get_include_path()); */

@@ -2,31 +2,49 @@ imports:
   - { resource: doctrine.yml }
   - { resource: zig.install.yml }
 
-parameters:
-    kernel.include_core_classes: false
-
-kernel.config:
+framework:
+  #name: catapatate
+  secret: d3c5eb72-98cd-4db9-bfec-9395a65bc94a
   charset: UTF-8
-  error_handler_level: null
-
-web.templating:
-  escaping:       htmlspecialchars
-  assets_version: SomeVersionScheme
-
-web.config:
+  #error_handler: null
+  csrf_protection:
+     enabled: true
   router: { resource: "%kernel.root_dir%/config/routing.yml" }
+  validation: { enabled: true, annotations: true }
+  templating:    { engines: ['twig'] } #assets_version: SomeVersionScheme
+  session:
+    default_locale: en_US
+    lifetime:       3600
+    auto_start:     true
+    #escaping: htmlspecialchars
+    #renderers:
+  #translator:
+  #  fallback:
 
-web.templating: ~
 
-zig.registry: ~
+# Twig Configuration
+twig:
+  debug:            %kernel.debug%
+  strict_variables: %kernel.debug%
 
-zig.api: ~
 
-#  directory: config/registry
+# Assetic Configuration
+# assetic:
+#     debug:          %kernel.debug%
+#     use_controller: false
+#     filters:
+#         cssrewrite: ~
+#         # closure:
+#         #     jar: %kernel.root_dir%/java/compiler.jar
+#         # yui_css:
+#         #     jar: %kernel.root_dir%/java/yuicompressor-2.4.2.jar
 
-swift.mailer:
-  transport: smtp #gmail
-  host: localhost #smtp.dedibox.fr
-  #username:
-  #password:
+
+#zig: ~
+
+# swiftmailer: ~
+    # transport: %mailer_transport%
+    # host:      %mailer_host%
+    # username:  %mailer_user%
+    # password:  %mailer_password%
 

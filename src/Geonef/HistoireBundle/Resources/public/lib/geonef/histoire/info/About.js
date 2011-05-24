@@ -1,28 +1,28 @@
 
-dojo.provide('histoire.info.About');
+dojo.provide('geonef.histoire.info.About');
 
-dojo.require('jig.layout._Anchor');
+dojo.require('geonef.jig.layout._Anchor');
 dojo.require('dijit._Templated');
-dojo.require('jig.version');
+dojo.require('geonef.jig.version');
 dojo.require('dijit.layout.AccordionContainer');
-dojo.require('jig.tool.UserFeedback');
+dojo.require('geonef.jig.tool.UserFeedback');
 
 // we need to put it somewhere...
-dojo.require('histoire.settings');
+dojo.require('geonef.histoire.settings');
 
 // used in code
-dojo.require('histoire.macro.presentationAppMacro');
-dojo.require('jig.workspace');
+dojo.require('geonef.histoire.macro.presentationAppMacro');
+dojo.require('geonef.jig.workspace');
 
-dojo.declare('histoire.info.About', [ jig.layout._Anchor, dijit._Templated ],
+dojo.declare('geonef.histoire.info.About', [ geonef.jig.layout._Anchor, dijit._Templated ],
 {
-  templateString: dojo.cache("histoire.info", "templates/About.html"),
+  templateString: dojo.cache("geonef.histoire.info", "templates/About.html"),
   widgetsInTemplate: true,
   name: 'Notice',
   icon: '/images/icons/tool_about.png',
 
   postMixInProperties: function() {
-    this.version = jig.version;
+    this.version = geonef.jig.version;
   },
 
   /*startup: function() {
@@ -32,15 +32,15 @@ dojo.declare('histoire.info.About', [ jig.layout._Anchor, dijit._Templated ],
   },*/
 
   sendFeedback: function() {
-    var widget = jig.workspace.loadWidget(null,
-      function(id) { return new jig.tool.UserFeedback; });
-    jig.workspace.autoAnchorWidget(widget);
+    var widget = geonef.jig.workspace.loadWidget(null,
+      function(id) { return new geonef.jig.tool.UserFeedback; });
+    geonef.jig.workspace.autoAnchorWidget(widget);
     widget.startup();
   },
 
   startPresentation: function(event) {
     console.log('startPresentation', this, arguments);
-    dojo['require']('jig.macro.Player');
+    dojo['require']('geonef.jig.macro.Player');
     for (var node = event.target; !node.hasAttribute('widgetid');
          node = node.parentNode) {
       //
@@ -53,13 +53,13 @@ dojo.declare('histoire.info.About', [ jig.layout._Anchor, dijit._Templated ],
       dojo['require'](name);
       var macro = dojo.getObject(name);
       console.log('macro', macro);
-      jig.macro.Player.prototype.attemptPlay(macro);
+      geonef.jig.macro.Player.prototype.attemptPlay(macro);
     }
   },
 
   createPresentation: function() {
-    dojo['require']('jig.macro.Player');
-    var player = new jig.macro.Player();
+    dojo['require']('geonef.jig.macro.Player');
+    var player = new geonef.jig.macro.Player();
     player.actionCreate();
   },
 

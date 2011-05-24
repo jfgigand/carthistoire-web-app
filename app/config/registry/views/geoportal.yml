@@ -4,8 +4,8 @@
 ##
 #############################################################
 
-class: Zig\View\Document\Workspace
-title: "Carthistoire"
+class: Geonef\Zig\View\Document\Workspace
+title: Carthistoire
 
 #############################################################
 ## HEADER
@@ -25,26 +25,24 @@ packageStyles: false
 scripts:
   dojo: /x/dojo/dojo.js
   checkBrowser: >-
-    if (!dojo.isFF) {
-      alert("Vous utilisez un navigateur différent de Firefox,\n" +
+    if (!dojo.isFF && !dojo.isChrome) {
+      alert("Vous utilisez un navigateur autre que Firefox ou Chrome,\n" +
             "sur lequel l'application n'a pas été testée.\n\n" +
             "Il est donc probable qu'elle fonctionne mal ou pas du tout.");
     }
-  openlayers: /js/openlayers/build/OpenLayers.js
+  # openlayers: /js/openlayers/build/OpenLayers.js
   ign: http://api.ign.fr/geoportail/api?v=1.1-e&amp;key=499880235241209162&amp;instance=VISU
-  workspace: /x/workspace_default.js?z
-  start: /js/start.js
+  application: /x/application.js
+  # workspace: /x/workspace_default.js?z
+  # start: /js/start.js
 
 scriptAffectations:
   window\.workspaceKey: home
+  window\.workspaceObjDeps: []
   #window\.workspaceData:
 
 css:
-  #ol: /js/openlayers/themes/default/style.css
-  #app: /js/ign/css/application.css
-  app: /x/histoire/css/application.css
-  #tundra: /x/dijit/themes/tundra/tundra.css
-  #tundra: /js/dijit/themes/tundra/tundra.css
+  app: /x/geonef/histoire/style/application.css
 
 #############################################################
 ## BODY
@@ -70,7 +68,7 @@ bodyInnerHtml:
 
 widgets:
   root:
-    _class: jig.layout.RootPane
+    _class: geonef.jig.layout.RootPane
     state:
       children:
         - mainContainer
@@ -79,7 +77,7 @@ widgets:
         #positionDirection: br-up
       #  # "br-up", "br-left", "bl-up", "bl-right", "tr-down", "tr-left", "tl-down", "tl-right"
   mainContainer:
-    _class: jig.layout.BorderContainer
+    _class: geonef.jig.layout.BorderContainer
     state:
       design: sidebar
       children:
@@ -89,11 +87,11 @@ widgets:
         - sideContainer
       paneSize: 280
   map:
-    #_class: ploomap.map.GeoportalMinimum
-    _class: ploomap.map.Geoportal
-    #_class: ploomap.map.Classical
+    #_class: geonef.ploomap.map.GeoportalMinimum
+    _class: geonef.ploomap.map.Geoportal
+    #_class: geonef.ploomap.map.Classical
     state:
-      layersDefsClass: histoire.layerDef.Application
+      layersDefsClass: geonef.histoire.layerDef.Application
       layers:
         - { name: GEOGRAPHICALGRIDSYSTEMS.MAPS, opacity: 0.5 }
         - revolution_francaise
@@ -111,7 +109,7 @@ widgets:
         #- { class: OpenLayers.Control.Navigation, options: { mouseWheelOptions: { interval: 100 } } }
         #- OpenLayers.Control.MousePosition
         #- OpenLayers.Control.PanZoomBar
-        - ploomap.OpenLayers.Control.SexyZoomBar
+        - geonef.ploomap.OpenLayers.Control.SexyZoomBar
         #- Geoportal.Control.SearchToolbar
         #- Geoportal.Control.ToolBox
         #- Geoportal.Control.AddImageLayer
@@ -123,10 +121,10 @@ widgets:
         #-
         #- Geoportal.Control.
         #- Geoportal.Control.
-        - { class: ploomap.OpenLayers.Control.ScaleLine, options: { maxWidth: 150, geodesic: true } }
-        #- ploomap.OpenLayers.Control.TileLoadSpinner
+        - { class: geonef.ploomap.OpenLayers.Control.ScaleLine, options: { maxWidth: 150, geodesic: true } }
+        #- geonef.ploomap.OpenLayers.Control.TileLoadSpinner
   sideContainer:
-    _class: jig.layout.BorderContainer
+    _class: geonef.jig.layout.BorderContainer
     state:
       design: headline
       children:
@@ -137,9 +135,9 @@ widgets:
         #- sideContainer2
       paneSize: 200
   macroEditor:
-    _class: jig.macro.Editor
+    _class: geonef.jig.macro.Editor
   sideContainer2:
-    _class: jig.layout.BorderContainer
+    _class: geonef.jig.layout.BorderContainer
     state:
       design: headline
       children:
@@ -147,21 +145,21 @@ widgets:
         - about
       paneSize: 150
   layers:
-    _class: ploomap.tool.Layers
+    _class: geonef.ploomap.tool.Layers
     state:
       mapWidget: map
       appearTarget: bottom
   overviewMap:
-    _class: ploomap.tool.OverviewMap
+    _class: geonef.ploomap.tool.OverviewMap
     state:
       mapWidget: map
       copyLayer: GEOGRAPHICALGRIDSYSTEMS.MAPS #_FXX_territory_
   about:
-    _class: histoire.info.About
+    _class: geonef.histoire.info.About
 
 settings:
   layerManager:
-    layerLibraryClass: histoire.layerLibrary.Application
+    layerLibraryClass: geonef.histoire.layerLibrary.Application
   layers:
     #- ign
     #- geol
@@ -191,14 +189,14 @@ settings:
 
   mapTools:
     tools:
-      - ploomap.tool.Magnifier
-      - ploomap.tool.OverviewMap
-      - ploomap.tool.Measure
-      - ploomap.tool.Export
-      - ploomap.tool.StreetView
-      - ploomap.tool.Itineraries
-      - jig.tool.UserFeedback
-      - histoire.info.About
+      - geonef.ploomap.tool.Magnifier
+      - geonef.ploomap.tool.OverviewMap
+      - geonef.ploomap.tool.Measure
+      - geonef.ploomap.tool.Export
+      - geonef.ploomap.tool.StreetView
+      - geonef.ploomap.tool.Itineraries
+      - geonef.jig.tool.UserFeedback
+      - geonef.histoire.info.About
 
 
 
