@@ -1,0 +1,26 @@
+/**
+ ** MAP
+ **/
+
+
+/* map */
+.ploomapMap { height: 100%; }
+.ploomapMap .ploomapInputMapExtent { right: 80px; }
+/*.ploomapMap .ploomapLegendContainer { position: absolute; top: 0; right: 0; z-index: 4200; }*/
+.ploomapInputExtent ul { list-style-type: none; }
+.ploomapControl { position: absolute; z-index: 1002; cursor: default; }
+.ploomapControlContextual { top: 30px; right: 0px; padding: 5px; max-width: 300px; }
+.ploomapControlContextual.jigCacoin { background: transparent; }
+
+
+/* floating items */
+.PloomapolControlTileLoadSpinner { background: url("openlayers/spinner.gif") no-repeat 0 0; bottom: 0; right: 0; width: 32px; height: 32px; border-top: 1px solid #050; border-left: 1px solid #050; display: none; }
+.olLayerGoogleCopyright { position: absolute; bottom: 0; display: none; }
+.olLayerGooglePoweredBy { position: absolute; bottom: 0; display: none; }
+
+* > .opacity { position: absolute; left: 0; top: 0; right: 0; bottom: 0; opacity: 0.5; z-index: -100; background: #9cf; border: 1px solid #369; }
+/* *:hover > .opacity { opacity: 0.8; } */
+
+
+/* misc */
+.gpMainMap .gpMainMapCell {  border: none; }

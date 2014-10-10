@@ -1,0 +1,30 @@
+<div class="item ploomapToolLayer">
+
+  <div dojoType="dijit.form.DropDownButton" class="nolabel"
+       style="position: absolute; top: 0; right: 0; z-index: 42000; ">
+    <span>couche</span>
+    <div dojoType="dijit.TooltipDialog">
+      <div dojoType="${optClass}"
+           dojoAttachPoint="optWidget"
+           mapWidget="${layer.map.mapWidget.id}" layerWidget="${id}"></div>
+    </div>
+  </div>
+
+  <div dojoAttachPoint="mainNode">
+	<div dojoType="dijit.form.CheckBox"
+		 dojoAttachPoint="visibilityCheckBox"
+		 dojoAttachEvent="onChange:toggleVisibility"></div>
+	<span dojoAttachPoint="labelNode" class="dojoDndHandle"></span>
+  </div>
+
+  <div dojoType="dijit.form.HorizontalSlider"
+       dojoAttachPoint="slider"
+       dojoAttachEvent="onChange:changeOpacity"
+       minimum="0" maximum="100" value="100"
+       discreteValues="20"
+       pageIncrement="20" showButtons="true"
+       intermediateChanges="true" slideDuration="500"
+       style="height:30px; width: 90%; display: none;">
+  </div>
+
+</div>

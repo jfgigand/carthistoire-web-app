@@ -1,0 +1,24 @@
+<div class="jigCacoin padding ploomapToolMeasure">
+  <h1>Outil de mesure</h1>
+  <div>
+      <button dojoType="dijit.form.Button" dojoAttachPoint="distanceButton"
+              dojoAttachEvent="onClick:measureDistance">Mesurer une distance</button>
+      <button dojoType="dijit.form.Button" dojoAttachPoint="areaButton"
+              dojoAttachEvent="onClick:measureArea">Mesurer une aire</button>
+      <button dojoType="dijit.form.Button" dojoAttachPoint="cancelButton"
+              dojoAttachEvent="onClick:cancel" disabled="true">Naviguer</button><br/>
+      <input dojoType="dijit.form.CheckBox" dojoAttachPoint="geodesicCheckBox"
+             dojoAttachEvent="onChange:toggleGeodesic" checked="true"/>Mesure géodésique
+  </div>
+  <hr/>
+  <h3>Liste des mesures</h3>
+  <ul class="list" dojoAttachPoint="listNode">
+  </ul>
+  <hr/>
+  <div>
+      <button dojoType="dijit.form.Button" dojoAttachPoint="cleanButton"
+              dojoAttachEvent="onClick:clean" disabled="true">Nettoyer</button>
+      <button dojoType="dijit.form.Button"
+              dojoAttachEvent="onClick:destroy">Fermer</button>
+  </div>
+</div>

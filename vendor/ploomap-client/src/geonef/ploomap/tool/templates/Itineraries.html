@@ -1,0 +1,54 @@
+<div class="jigCacoin padding ploomapToolItineraries">
+<h1>Itinéraires</h1>
+  <table class="list"><body>
+    <tr>
+      <td class="n">Départ</td>
+      <td><input dojoType="dijit.form.TextBox"
+  			 dojoAttachPoint="startInput"/>
+      </td>
+    </tr>
+    <tr>
+      <td class="n">Arrivée</td>
+      <td><input dojoType="dijit.form.TextBox"
+                  dojoAttachPoint="endInput"/>
+      </td>
+    </tr>
+    <tr>
+      <td class="n"> Mode</td>
+      <td><select dojoType="dijit.form.Select" dojoAttachPoint="travelModeSelect">
+                  <option value="DRIVING">Voiture</option>
+                  <option value="WALKING">Marche</option>
+                  <option value="BICYCLING">Vélo</option>
+                </select>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2"><input type="checkbox" dojoType="geonef.jig.input.BooleanCheckBox"
+                                dojoAttachPoint="avoidHighwaysInput"
+  				value="true"/>
+  	Éviter les autoroutes
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2"><input type="checkbox" dojoType="geonef.jig.input.BooleanCheckBox"
+                                dojoAttachPoint="avoidTollsInput"
+  				value="true"/>
+  	Éviter les péages
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <button dojoType="dijit.form.Button" dojoAttachPoint="computeButton"
+                dojoAttachEvent="onClick:doQuery">Calculer</button>
+        <button dojoType="dijit.form.Button"
+                dojoAttachEvent="onClick:destroy">Fermer</button>
+      </td>
+    </tr>
+  </tbody></table>
+
+  <hr/>
+
+  <table class="list"><tbody dojoAttachPoint="resultNode">
+  </tbody></table>
+
+</div>

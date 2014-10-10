@@ -1,0 +1,39 @@
+<div class="ploomapLayerOpt ploomapLayerOptSimple jigCacoin">
+  <!-- <h1>Couche : <span dojoAttachPoint="layerTitleNode"></span></h1> -->
+  <div dojoAttachPoint="vectorNode">
+    <h1 dojoAttachPoint="vectorTitleNode">Vecteurs</h1>
+    <button dojoType="dijit.form.ToggleButton"
+            dojoAttachPoint="toggleSelectControlButton"
+            dojoAttachEvent="onChange:_setSelectControlActiveAttr"
+            iconClass="dijitCheckBoxIcon">
+      <img src="${iconUrl}"/><br/>
+      <span>Interactifs</span>
+    </button>
+    <div dojoType="dijit.form.DropDownButton">
+      <span>Style</span>
+      <div dojoType="dijit.TooltipDialog" class="jigCacoin">
+        <div dojoAttachPoint="styleNode" style="width:400px">
+          <h1>Style des vecteurs</h1>
+          <p>
+            Ci-dessous ce trouve la feuille de style au format SLD.
+            Elle est éditable sous cette forme brute, ce qui permet de
+            changer le style de l'apparence des vecteurs sur la carte.
+          </p>
+          <textarea dojoType="dijit.form.SimpleTextarea" dojoAttachPoint="sldTextarea"
+                    style="display: block; width: 98%; height: 230px; ">
+          </textarea>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div dojoAttachPoint="generalNode">
+    <h1 dojoAttachPoint="generalTitleNode">Couche</h1>
+  </div>
+  <div dojoAttachPoint="metadataNode">
+    <h1 dojoAttachPoint="metadataTitleNode">Informations</h1>
+    <table class="list"><tbody dojoAttachPoint="metadataListNode">
+    </tbody></table>
+  </div>
+  <div dojoType="dijit.layout.ContentPane" title="...">
+  </div>
+</div>
