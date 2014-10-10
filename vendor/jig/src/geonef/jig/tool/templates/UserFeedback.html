@@ -1,0 +1,31 @@
+<div class="jigCacoin padding">
+  <h1 dojoAttachPoint="titleNode"></h1>
+  <div dojoType="geonef.jig.input.Group"
+       dojoAttachPoint="groupInput"
+       dojoAttachEvent="onChange:onChange">
+    <table class="list">
+      <tbody>
+        <tr>
+          <td class="n">Votre nom</td>
+          <td><input dojoType="dijit.form.TextBox" name="user"
+                     required="true" trim="true"/></td>
+        </tr>
+        <tr>
+          <td class="n">Message</td>
+          <td><textarea dojoType="dijit.form.Textarea" name="message"
+                        required="true" trim="true"
+                        __cols="20" __rows="5"></textarea></td>
+        </tr>
+        <tr>
+          <td class="n" colspan="2">
+            <button dojoType="geonef.jig.button.Action"
+                    dojoAttachPoint="sendButton"
+                    dojoAttachEvent="onClick:send">Envoyer</button>
+            <button dojoType="geonef.jig.button.Action"
+                    dojoAttachEvent="onClick:destroy">Fermer</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

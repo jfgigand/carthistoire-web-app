@@ -1,0 +1,56 @@
+
+/**
+ ** LAYOUT
+ **********************************************************/
+
+
+@import url("common.css");
+@import url("dev.css");
+@import url("info.css");
+@import url("input.css");
+@import url("layout.css");
+@import url("list.css");
+@import url("macro.css");
+@import url("widget.css");
+
+/*
+ * global to jig
+ *******************************/
+
+/* list */
+
+/*
+ * widget-specific rules
+ *******************************/
+
+/*a:hover, .link:hover { text-decoration: underline; }*/
+/*   */
+/*.jigWidgetProcessing > .content > .spinner { background: url("icon/spinner.gif") 50% 50% no-repeat; }*/
+
+/*
+ * surcharge dojo/dijit/dojox
+ *******************************/
+/* BUTTONS */
+/*.jigLayoutAnchorButton button { background: #fa0; color: #000; }*/
+/*.dijitDropDownButton:first-child .dijitButtonNode,
+ .dijitButton:first-child .dijitButtonNode,
+ .dijitDropDownButton:first-child .dijitButtonNode { border-radius: 3px 0 0 3px; -moz-border-radius: 3px 0 0 3px; }*/
+
+/* .dijitTooltipContainer { font-size: 120%; /\* tooltip size is computed before DOM insertion *\/ } */
+
+/**
+ ** COLOURS
+ **********************************************************/
+
+/*
+.jigCacoin .dijitTooltipContainer { background-color: #ccf; }
+body .jigCacoin.dijitTooltipAbove .dijitTooltipConnector {  background: url("/images/dijit/tooltipConnectorDown.png"); }
+body .jigCacoin.dijitTooltipBelow .dijitTooltipConnector {  background: url("/images/dijit/tooltipConnectorUp.png"); }
+body .jigCacoin.dijitTooltipLeft .dijitTooltipConnector {  background: url("/images/dijit/tooltipConnectorRight.png"); }
+body .jigCacoin.dijitTooltipRight .dijitTooltipConnector {  background: url("/images/dijit/tooltipConnectorLeft.png"); }*/
+
+/*.jigCacoin .list .item:hover, .jigCacoin table.list > tbody > tr:hover > td { background-color: #fdc; } maybe too much */
+
+/* LAST COMMENTED:
+.jigCacoin .list .item.selected, .jigCacoin table.list > tbody > tr.selected > td { background-color: #f9f; }
+.jigCacoin .list .item, .jigCacoin table.list > tbody > tr > td { background-color: #cfc; }*/

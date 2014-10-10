@@ -1,0 +1,25 @@
+/*********************************************
+ *
+ * Rules for input widgets
+ *
+ *********************************************/
+
+
+
+/* jig input color */
+@import url("../../dojox/widget/ColorPicker/ColorPicker.css");
+.jigInputColor .dijitButtonText.hexa { font-family: monospace; }
+.jigInputColorList .dropDownButton .dijitButtonText { padding: 0; position: relative; top: -5px; }
+
+
+/*  */
+.tundra .dijitTextBox { border-radius: 3px; -moz-border-radius: 3px; }
+.tundra .dijitTextBox.grouped { border-radius: 0; -moz-border-radius: 0; margin: 0; border-left: none; width: 10em; }
+.tundra .dijitTextBoxFocused { border-color: #ccc; background-color: #f4c8ff; }
+.tundra .dijitTextBox input { height: 19px; }
+.tundra .dijitTextBox .dijitButtonNode input { height: 19px !important; }
+
+
+/*  */
+.tundra .dijitSelect { margin: 0; }
+.tundra .dijitSelect .dijitButtonContents { padding: 0.1em 0; }

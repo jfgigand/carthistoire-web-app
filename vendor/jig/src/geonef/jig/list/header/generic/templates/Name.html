@@ -1,0 +1,17 @@
+<td colspan="${colspan}" class="margin">
+  <span dojoAttachEvent="onclick:toggleSort" class="link sortCmd">&nbsp;</span>
+  <div dojoType="dijit.form.DropDownButton" dojoAttachPoint="buttonNode">
+    <span dojoAttachPoint="titleNode" class="title"></span>
+    <div dojoType="dijit.TooltipDialog">
+      <label msgKey="filter">Doit contenir</label>&nbsp;:
+      <input dojoType="dijit.form.TextBox"
+	     dojoAttachPoint="filterWidget"
+	     dojoAttachEvent="onChange:onFilterChange"
+	     tooltipPosition="below">
+      <button dojoType="geonef.jig.button.Action" type="submit"
+	      dojoAttachEvent="onClick:updateFilter" msgKey="apply">Appliquer</button>
+    </div>
+  </div>
+  <div dojoAttachPoint="filterSummaryNode" style="display:none" class="filterSummary">
+    Contient&nbsp;: <span dojoAttachPoint="filterSummaryValueNode"></span>&nbsp;<span class="link" dojoAttachEvent="onclick:clearFilter">X</span></div>
+</td>
