@@ -1,0 +1,454 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StyledLayerDescriptor version="1.0.0"
+                           xmlns="http://www.opengis.net/sld"
+                           xmlns:ogc="http://www.opengis.net/ogc"
+                           xmlns:gml="http://www.opengis.net/gml"
+                           xmlns:xlink="http://www.w3.org/1999/xlink"
+                           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                           xsi:schemaLocation="http://www.opengis.net/sld http://schemas.opengis.net/sld/1.0.0/StyledLayerDescriptor.xsd">
+
+  <!-- Style par défaut des faits historiques -->
+  <NamedLayer>
+    <Name>default</Name>
+
+    <!-- Style unique (jusqu'aujourd'hui) -->
+    <UserStyle>
+      <Name>okapi1</Name>
+
+      <IsDefault>1</IsDefault>
+
+      <!-- Un seul FeatureTypeStyle pour tous (point, ligne, polygône) -->
+      <FeatureTypeStyle>
+
+	<!-- .......... Zoom < 12 ...............-->
+        <Rule>
+          <Name>rule_inf</Name>
+	  <ogc:Filter>
+	    <ogc:PropertyIsEqualTo>
+	      <ogc:PropertyName>type</ogc:PropertyName>
+	      <ogc:Literal>mouvement</ogc:Literal>
+	    </ogc:PropertyIsEqualTo>
+	  </ogc:Filter>
+          <PointSymbolizer>
+            <Graphic>
+              <ExternalGraphic>
+                <OnlineResource xlink:href="/lib/cartapatate/style/marker/char.png" />
+                <Format>image/png</Format>
+              </ExternalGraphic>
+              <Opacity>1</Opacity>
+              <Size>100</Size>
+            </Graphic>
+            <Label>
+              <ogc:PropertyName xmlns:ogc="http://www.opengis.net/ogc">name</ogc:PropertyName>
+            </Label>
+
+            <Font>
+              <CssParameter name="font-family">Arial</CssParameter>
+              <CssParameter name="font-size">12</CssParameter>
+              <CssParameter name="font-weight">bold</CssParameter>
+              <CssParameter name="font-style">italic</CssParameter>
+              <CssParameter name="stroke">#00ff00</CssParameter>
+
+            </Font>
+          </PointSymbolizer>
+        </Rule>
+        <!--              AFFRONTEMENT               -->
+        <Rule>
+          <Name>rule_inf</Name>
+	  <ogc:Filter>
+	    <ogc:PropertyIsEqualTo>
+	      <ogc:PropertyName>type</ogc:PropertyName>
+	      <ogc:Literal>affrontement</ogc:Literal>
+	    </ogc:PropertyIsEqualTo>
+	  </ogc:Filter>
+          <PointSymbolizer>
+            <Graphic>
+              <ExternalGraphic>
+                <OnlineResource xlink:href="/lib/cartapatate/style/marker/etoile.png" />
+                <Format>image/png</Format>
+              </ExternalGraphic>
+              <Opacity>1</Opacity>
+              <Size>100</Size>
+            </Graphic>
+            <Label>
+              <ogc:PropertyName xmlns:ogc="http://www.opengis.net/ogc">name</ogc:PropertyName>
+            </Label>
+
+            <Font>
+              <CssParameter name="font-family">Arial</CssParameter>
+              <CssParameter name="font-size">12</CssParameter>
+              <CssParameter name="font-weight">bold</CssParameter>
+              <CssParameter name="font-style">italic</CssParameter>
+              <CssParameter name="stroke">#00ff00</CssParameter>
+
+            </Font>
+          </PointSymbolizer>
+        </Rule>
+        <!--              CAMP               -->
+        <Rule>
+          <Name>rule_inf</Name>
+	  <ogc:Filter>
+	    <ogc:PropertyIsEqualTo>
+	      <ogc:PropertyName>type</ogc:PropertyName>
+	      <ogc:Literal>camp</ogc:Literal>
+	    </ogc:PropertyIsEqualTo>
+	  </ogc:Filter>
+          <PointSymbolizer>
+            <Graphic>
+              <ExternalGraphic>
+                <OnlineResource xlink:href="/lib/cartapatate/style/marker/camp.png" />
+                <Format>image/png</Format>
+              </ExternalGraphic>
+              <Opacity>1</Opacity>
+              <Size>100</Size>
+            </Graphic>
+            <Label>
+              <ogc:PropertyName xmlns:ogc="http://www.opengis.net/ogc">name</ogc:PropertyName>
+            </Label>
+
+            <Font>
+              <CssParameter name="font-family">Arial</CssParameter>
+              <CssParameter name="font-size">12</CssParameter>
+              <CssParameter name="font-weight">bold</CssParameter>
+              <CssParameter name="font-style">italic</CssParameter>
+              <CssParameter name="stroke">#00ff00</CssParameter>
+
+            </Font>
+          </PointSymbolizer>
+        </Rule>
+        <!--              COMMUNICATION               -->
+        <Rule>
+          <Name>rule_inf</Name>
+	  <ogc:Filter>
+	    <ogc:PropertyIsEqualTo>
+	      <ogc:PropertyName>type</ogc:PropertyName>
+	      <ogc:Literal>communication</ogc:Literal>
+	    </ogc:PropertyIsEqualTo>
+	  </ogc:Filter>
+          <PointSymbolizer>
+            <Graphic>
+              <ExternalGraphic>
+                <OnlineResource xlink:href="/lib/cartapatate/style/marker/parchemin.png" />
+                <Format>image/png</Format>
+              </ExternalGraphic>
+              <Opacity>1</Opacity>
+              <Size>100</Size>
+            </Graphic>
+            <Label>
+              <ogc:PropertyName xmlns:ogc="http://www.opengis.net/ogc">name</ogc:PropertyName>
+            </Label>
+
+            <Font>
+              <CssParameter name="font-family">Arial</CssParameter>
+              <CssParameter name="font-size">12</CssParameter>
+              <CssParameter name="font-weight">bold</CssParameter>
+              <CssParameter name="font-style">italic</CssParameter>
+              <CssParameter name="stroke">#00ff00</CssParameter>
+
+            </Font>
+          </PointSymbolizer>
+        </Rule>
+
+      </FeatureTypeStyle>
+    </UserStyle>
+  </NamedLayer>
+
+  <!--
+     *************************************************************************
+                                    SELECT
+    -->
+
+  <NamedLayer>
+    <Name>select</Name>
+    <!-- Style unique (jusqu'aujourd'hui) -->
+    <UserStyle>
+      <Name>okapi1</Name>
+      <IsDefault>1</IsDefault>
+
+      <!-- Un seul FeatureTypeStyle pour tous (point, ligne, polygône) -->
+
+      <FeatureTypeStyle>
+
+	<!-- .......... Zoom < 12 ...............-->
+        <Rule>
+          <Name>rule_inf</Name>
+	  <ogc:Filter>
+	    <ogc:PropertyIsEqualTo>
+	      <ogc:PropertyName>type</ogc:PropertyName>
+	      <ogc:Literal>mouvement</ogc:Literal>
+	    </ogc:PropertyIsEqualTo>
+	  </ogc:Filter>
+          <PointSymbolizer>
+            <Graphic>
+              <ExternalGraphic>
+                <OnlineResource xlink:href="/lib/cartapatate/style/marker/char.png" />
+                <Format>image/png</Format>
+              </ExternalGraphic>
+              <Opacity>1</Opacity>
+              <Size>150</Size>
+            </Graphic>
+            <Label>
+              <ogc:PropertyName xmlns:ogc="http://www.opengis.net/ogc">name</ogc:PropertyName>
+            </Label>
+
+            <Font>
+              <CssParameter name="font-family">Arial</CssParameter>
+              <CssParameter name="font-size">12</CssParameter>
+              <CssParameter name="font-weight">bold</CssParameter>
+              <CssParameter name="font-style">italic</CssParameter>
+              <CssParameter name="stroke">#00ff00</CssParameter>
+
+            </Font>
+          </PointSymbolizer>
+        </Rule>
+        <!--              AFFRONTEMENT               -->
+        <Rule>
+          <Name>rule_inf</Name>
+	  <ogc:Filter>
+	    <ogc:PropertyIsEqualTo>
+	      <ogc:PropertyName>type</ogc:PropertyName>
+	      <ogc:Literal>affrontement</ogc:Literal>
+	    </ogc:PropertyIsEqualTo>
+	  </ogc:Filter>
+          <PointSymbolizer>
+            <Graphic>
+              <ExternalGraphic>
+                <OnlineResource xlink:href="/lib/cartapatate/style/marker/etoile.png" />
+                <Format>image/png</Format>
+              </ExternalGraphic>
+              <Opacity>1</Opacity>
+              <Size>150</Size>
+            </Graphic>
+            <Label>
+              <ogc:PropertyName xmlns:ogc="http://www.opengis.net/ogc">name</ogc:PropertyName>
+            </Label>
+
+            <Font>
+              <CssParameter name="font-family">Arial</CssParameter>
+              <CssParameter name="font-size">12</CssParameter>
+              <CssParameter name="font-weight">bold</CssParameter>
+              <CssParameter name="font-style">italic</CssParameter>
+              <CssParameter name="stroke">#00ff00</CssParameter>
+
+            </Font>
+          </PointSymbolizer>
+        </Rule>
+        <!--              CAMP               -->
+        <Rule>
+          <Name>rule_inf</Name>
+	  <ogc:Filter>
+	    <ogc:PropertyIsEqualTo>
+	      <ogc:PropertyName>type</ogc:PropertyName>
+	      <ogc:Literal>camp</ogc:Literal>
+	    </ogc:PropertyIsEqualTo>
+	  </ogc:Filter>
+          <PointSymbolizer>
+            <Graphic>
+              <ExternalGraphic>
+                <OnlineResource xlink:href="/lib/cartapatate/style/marker/camp.png" />
+                <Format>image/png</Format>
+              </ExternalGraphic>
+              <Opacity>1</Opacity>
+              <Size>150</Size>
+            </Graphic>
+            <Label>
+              <ogc:PropertyName xmlns:ogc="http://www.opengis.net/ogc">name</ogc:PropertyName>
+            </Label>
+
+            <Font>
+              <CssParameter name="font-family">Arial</CssParameter>
+              <CssParameter name="font-size">12</CssParameter>
+              <CssParameter name="font-weight">bold</CssParameter>
+              <CssParameter name="font-style">italic</CssParameter>
+              <CssParameter name="stroke">#00ff00</CssParameter>
+
+            </Font>
+          </PointSymbolizer>
+        </Rule>
+        <!--              COMMUNICATION               -->
+        <Rule>
+          <Name>rule_inf</Name>
+	  <ogc:Filter>
+	    <ogc:PropertyIsEqualTo>
+	      <ogc:PropertyName>type</ogc:PropertyName>
+	      <ogc:Literal>communication</ogc:Literal>
+	    </ogc:PropertyIsEqualTo>
+	  </ogc:Filter>
+          <PointSymbolizer>
+            <Graphic>
+              <ExternalGraphic>
+                <OnlineResource xlink:href="/lib/cartapatate/style/marker/parchemin.png" />
+                <Format>image/png</Format>
+              </ExternalGraphic>
+              <Opacity>1</Opacity>
+              <Size>150</Size>
+            </Graphic>
+            <Label>
+              <ogc:PropertyName xmlns:ogc="http://www.opengis.net/ogc">name</ogc:PropertyName>
+            </Label>
+
+            <Font>
+              <CssParameter name="font-family">Arial</CssParameter>
+              <CssParameter name="font-size">12</CssParameter>
+              <CssParameter name="font-weight">bold</CssParameter>
+              <CssParameter name="font-style">italic</CssParameter>
+              <CssParameter name="stroke">#00ff00</CssParameter>
+
+            </Font>
+          </PointSymbolizer>
+        </Rule>
+      </FeatureTypeStyle>
+    </UserStyle>
+  </NamedLayer>
+
+  <!--
+     *************************************************************************
+                                         HOVER
+    -->
+
+  <NamedLayer>
+    <Name>hover</Name>
+
+    <!-- Style unique (jusqu'aujourd'hui) -->
+    <UserStyle>
+      <Name>okapi1</Name>
+      <IsDefault>1</IsDefault>
+
+      <!-- Un seul FeatureTypeStyle pour tous (point, ligne, polygône) -->
+      <FeatureTypeStyle>
+
+	<!-- .......... Zoom < 12 ...............-->
+        <Rule>
+          <Name>rule_inf</Name>
+	  <ogc:Filter>
+	    <ogc:PropertyIsEqualTo>
+	      <ogc:PropertyName>type</ogc:PropertyName>
+	      <ogc:Literal>mouvement</ogc:Literal>
+	    </ogc:PropertyIsEqualTo>
+	  </ogc:Filter>
+          <PointSymbolizer>
+            <Graphic>
+              <ExternalGraphic>
+                <OnlineResource xlink:href="/lib/cartapatate/style/marker/char.png" />
+                <Format>image/png</Format>
+              </ExternalGraphic>
+              <Opacity>1</Opacity>
+              <Size>150</Size>
+            </Graphic>
+            <Label>
+              <ogc:PropertyName xmlns:ogc="http://www.opengis.net/ogc">name</ogc:PropertyName>
+            </Label>
+
+            <Font>
+              <CssParameter name="font-family">Arial</CssParameter>
+              <CssParameter name="font-size">15</CssParameter>
+              <CssParameter name="font-weight">bold</CssParameter>
+              <CssParameter name="font-style">italic</CssParameter>
+              <CssParameter name="stroke">#00ff00</CssParameter>
+
+            </Font>
+          </PointSymbolizer>
+        </Rule>
+        <!--              AFFRONTEMENT               -->
+        <Rule>
+          <Name>rule_inf</Name>
+	  <ogc:Filter>
+	    <ogc:PropertyIsEqualTo>
+	      <ogc:PropertyName>type</ogc:PropertyName>
+	      <ogc:Literal>affrontement</ogc:Literal>
+	    </ogc:PropertyIsEqualTo>
+	  </ogc:Filter>
+          <PointSymbolizer>
+            <Graphic>
+              <ExternalGraphic>
+                <OnlineResource xlink:href="/lib/cartapatate/style/marker/etoile.png" />
+                <Format>image/png</Format>
+              </ExternalGraphic>
+              <Opacity>1</Opacity>
+              <Size>150</Size>
+            </Graphic>
+            <Label>
+              <ogc:PropertyName xmlns:ogc="http://www.opengis.net/ogc">name</ogc:PropertyName>
+            </Label>
+
+            <Font>
+              <CssParameter name="font-family">Arial</CssParameter>
+              <CssParameter name="font-size">15</CssParameter>
+              <CssParameter name="font-weight">bold</CssParameter>
+              <CssParameter name="font-style">italic</CssParameter>
+              <CssParameter name="stroke">#00ff00</CssParameter>
+
+            </Font>
+          </PointSymbolizer>
+        </Rule>
+        <!--              CAMP               -->
+        <Rule>
+          <Name>rule_inf</Name>
+	  <ogc:Filter>
+	    <ogc:PropertyIsEqualTo>
+	      <ogc:PropertyName>type</ogc:PropertyName>
+	      <ogc:Literal>camp</ogc:Literal>
+	    </ogc:PropertyIsEqualTo>
+	  </ogc:Filter>
+          <PointSymbolizer>
+            <Graphic>
+              <ExternalGraphic>
+                <OnlineResource xlink:href="/lib/cartapatate/style/marker/camp.png" />
+                <Format>image/png</Format>
+              </ExternalGraphic>
+              <Opacity>1</Opacity>
+              <Size>150</Size>
+            </Graphic>
+            <Label>
+              <ogc:PropertyName xmlns:ogc="http://www.opengis.net/ogc">name</ogc:PropertyName>
+            </Label>
+
+            <Font>
+              <CssParameter name="font-family">Arial</CssParameter>
+              <CssParameter name="font-size">15</CssParameter>
+              <CssParameter name="font-weight">bold</CssParameter>
+              <CssParameter name="font-style">italic</CssParameter>
+              <CssParameter name="stroke">#00ff00</CssParameter>
+
+            </Font>
+          </PointSymbolizer>
+        </Rule>
+        <!--              COMMUNICATION               -->
+        <Rule>
+          <Name>rule_inf</Name>
+	  <ogc:Filter>
+	    <ogc:PropertyIsEqualTo>
+	      <ogc:PropertyName>type</ogc:PropertyName>
+	      <ogc:Literal>communication</ogc:Literal>
+	    </ogc:PropertyIsEqualTo>
+	  </ogc:Filter>
+          <PointSymbolizer>
+            <Graphic>
+              <ExternalGraphic>
+                <OnlineResource xlink:href="/lib/cartapatate/style/marker/parchemin.png" />
+                <Format>image/png</Format>
+              </ExternalGraphic>
+              <Opacity>1</Opacity>
+              <Size>150</Size>
+            </Graphic>
+            <Label>
+              <ogc:PropertyName xmlns:ogc="http://www.opengis.net/ogc">name</ogc:PropertyName>
+            </Label>
+
+            <Font>
+              <CssParameter name="font-family">Arial</CssParameter>
+              <CssParameter name="font-size">15</CssParameter>
+              <CssParameter name="font-weight">bold</CssParameter>
+              <CssParameter name="font-style">italic</CssParameter>
+              <CssParameter name="stroke">#00ff00</CssParameter>
+
+            </Font>
+          </PointSymbolizer>
+        </Rule>
+
+
+      </FeatureTypeStyle>
+    </UserStyle>
+  </NamedLayer>
+
+</StyledLayerDescriptor>

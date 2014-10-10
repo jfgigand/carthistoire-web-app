@@ -1,0 +1,15 @@
+
+
+/**
+ ** Cartapatate platform - main CSS file
+ **
+ */
+
+/* Dojo - tundra theme */
+@import url("../../dijit/themes/tundra/tundra.css");
+
+/* Jig JS library */
+@import url("../../geonef/jig/style/jig.css");
+
+/* Ploomap JS library */
+@import url("../../geonef/ploomap/style/ploomap.css");

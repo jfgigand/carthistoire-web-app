@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StyledLayerDescriptor version="1.0.0"
+                           xmlns="http://www.opengis.net/sld"
+                           xmlns:ogc="http://www.opengis.net/ogc"
+                           xmlns:gml="http://www.opengis.net/gml"
+                           xmlns:xlink="http://www.w3.org/1999/xlink"
+                           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                           xsi:schemaLocation="http://www.opengis.net/sld http://schemas.opengis.net/sld/1.0.0/StyledLayerDescriptor.xsd">
+
+  <!-- Style par défaut des faits historiques -->
+  <NamedLayer>
+    <Name>default</Name>
+
+    <!-- Style unique (jusqu'aujourd'hui) -->
+    <UserStyle>
+      <Name>okapi1</Name>
+      <IsDefault>1</IsDefault>
+
+      <!-- Un seul FeatureTypeStyle pour tous (point, ligne, polygône) -->
+      <FeatureTypeStyle>
+
+	<!-- Règle de base -->
+        <Rule>
+          <Name>singleRule</Name>
+          <MaxScaleDenominator>90000</MaxScaleDenominator>
+          <PointSymbolizer>
+            <Graphic>
+              <ExternalGraphic>
+                <OnlineResource xlink:href="/images/markers/historicalfact.png" />
+                <Format>image/png</Format>
+              </ExternalGraphic>
+              <Opacity>1</Opacity>
+              <Size>50</Size>
+            </Graphic>
+          <!--/PointSymbolizer>
+          <TextSymbolizer-->
+            <Label>
+              <ogc:PropertyName xmlns:ogc="http://www.opengis.net/ogc">name</ogc:PropertyName>
+            </Label>
+            <LabelXOffset>50</LabelXOffset>
+            <LabelYOffset>50</LabelYOffset>
+            <LabelPlacement>
+              <PointPlacement>
+                <!--AnchorPoint>
+                  <AnchorPointX>0.5</AnchorPointX>
+                  <AnchorPointY>1</AnchorPointY>
+                </AnchorPoint-->
+                <Displacement>
+                  <DisplacementX>50</DisplacementX>
+                  <DisplacementY>20</DisplacementY>
+                </Displacement>
+              </PointPlacement>
+            </LabelPlacement>
+            <Font>
+              <CssParameter name="font-family">Arial</CssParameter>
+              <CssParameter name="font-size">16</CssParameter>
+              <CssParameter name="font-weight">bold</CssParameter>
+              <CssParameter name="font-style">italic</CssParameter>
+              <CssParameter name="stroke">#00ff00</CssParameter>
+            </Font>
+            <Halo>
+              <Radius>20</Radius>
+              <!--FillColor>#FFFF00</FillColor>
+              <FillOpacity>1.0</FillOpacity-->
+              <Fill>
+                <CssParameter name="fill">#FF0000</CssParameter>
+                <CssParameter name="fill-opacity">1.0</CssParameter>
+              </Fill>
+            </Halo>
+            <Fill>
+              <CssParameter name="fill">#0000FF</CssParameter>
+            </Fill>
+          <!--/TextSymbolizer-->
+          </PointSymbolizer>
+        </Rule>
+
+	<!-- Règle dézoom (z < 12 ; res >= 32) -->
+        <Rule>
+          <Name>singleRule</Name>
+          <MinScaleDenominator>90001</MinScaleDenominator>
+          <PointSymbolizer>
+            <Graphic>
+              <ExternalGraphic>
+                <OnlineResource xlink:href="/images/markers/historicalfact.png" />
+                <Format>image/png</Format>
+              </ExternalGraphic>
+              <Opacity>1</Opacity>
+              <Size>35</Size>
+            </Graphic>
+          <!--/PointSymbolizer>
+          <TextSymbolizer-->
+            <Label>
+              <ogc:PropertyName xmlns:ogc="http://www.opengis.net/ogc">name</ogc:PropertyName>
+            </Label>
+            <LabelXOffset>25</LabelXOffset>
+            <LabelYOffset>25</LabelYOffset>
+            <LabelPlacement>
+              <PointPlacement>
+                <!--AnchorPoint>
+                  <AnchorPointX>0.5</AnchorPointX>
+                  <AnchorPointY>1</AnchorPointY>
+                </AnchorPoint-->
+                <Displacement>
+                  <DisplacementX>50</DisplacementX>
+                  <DisplacementY>20</DisplacementY>
+                </Displacement>
+              </PointPlacement>
+            </LabelPlacement>
+            <Font>
+              <CssParameter name="font-family">Arial</CssParameter>
+              <CssParameter name="font-size">12</CssParameter>
+              <CssParameter name="font-weight">bold</CssParameter>
+              <CssParameter name="font-style">italic</CssParameter>
+              <CssParameter name="stroke">#00ff00</CssParameter>
+            </Font>
+            <Halo>
+              <Radius>20</Radius>
+              <!--FillColor>#FFFF00</FillColor>
+              <FillOpacity>1.0</FillOpacity-->
+              <Fill>
+                <CssParameter name="fill">#FF0000</CssParameter>
+                <CssParameter name="fill-opacity">1.0</CssParameter>
+              </Fill>
+            </Halo>
+            <Fill>
+              <CssParameter name="fill">#0000FF</CssParameter>
+            </Fill>
+          <!--/TextSymbolizer-->
+          </PointSymbolizer>
+        </Rule>
+
+      </FeatureTypeStyle>
+    </UserStyle>
+  </NamedLayer>
+
+  <!--
+     *************************************************************************
+    -->
+
+  <NamedLayer>
+    <Name>select</Name>
+    <!-- Style unique (jusqu'aujourd'hui) -->
+    <UserStyle>
+      <Name>okapi1</Name>
+      <IsDefault>1</IsDefault>
+
+      <!-- Un seul FeatureTypeStyle pour tous (point, ligne, polygône) -->
+      <FeatureTypeStyle>
+
+	<!-- Type : Lieu -->
+        <Rule>
+          <Name>singleRule</Name>
+          <MaxScaleDenominator>90000</MaxScaleDenominator>
+          <PointSymbolizer>
+            <Graphic>
+              <ExternalGraphic>
+                <OnlineResource xlink:href="/images/markers/historicalfact_select.png" />
+                <Format>image/png</Format>
+              </ExternalGraphic>
+              <Opacity>1</Opacity>
+              <Size>50</Size>
+            </Graphic>
+          </PointSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>singleRule</Name>
+          <MinScaleDenominator>90001</MinScaleDenominator>
+          <PointSymbolizer>
+            <Graphic>
+              <ExternalGraphic>
+                <OnlineResource xlink:href="/images/markers/historicalfact_select.png" />
+                <Format>image/png</Format>
+              </ExternalGraphic>
+              <Opacity>1</Opacity>
+              <Size>35</Size>
+            </Graphic>
+          </PointSymbolizer>
+        </Rule>
+
+      </FeatureTypeStyle>
+    </UserStyle>
+  </NamedLayer>
+
+  <!--
+     *************************************************************************
+    -->
+
+  <NamedLayer>
+    <Name>hover</Name>
+    <!-- Style unique (jusqu'aujourd'hui) -->
+    <UserStyle>
+      <Name>okapi1</Name>
+      <IsDefault>1</IsDefault>
+
+      <!-- Un seul FeatureTypeStyle pour tous (point, ligne, polygône) -->
+      <FeatureTypeStyle>
+
+	<!-- Type : Lieu -->
+        <Rule>
+          <Name>singleRule</Name>
+          <MaxScaleDenominator>90000</MaxScaleDenominator>
+          <PointSymbolizer>
+            <Graphic>
+              <ExternalGraphic>
+                <OnlineResource xlink:href="/images/markers/historicalfact_select.png" />
+                <Format>image/png</Format>
+              </ExternalGraphic>
+              <Opacity>1</Opacity>
+              <Size>50</Size>
+            </Graphic>
+          </PointSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>singleRule</Name>
+          <MinScaleDenominator>90001</MinScaleDenominator>
+          <PointSymbolizer>
+            <Graphic>
+              <ExternalGraphic>
+                <OnlineResource xlink:href="/images/markers/historicalfact_select.png" />
+                <Format>image/png</Format>
+              </ExternalGraphic>
+              <Opacity>1</Opacity>
+              <Size>35</Size>
+            </Graphic>
+          </PointSymbolizer>
+        </Rule>
+
+      </FeatureTypeStyle>
+    </UserStyle>
+  </NamedLayer>
+
+</StyledLayerDescriptor>

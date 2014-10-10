@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sld:StyledLayerDescriptor
+   version="1.0.0"
+   xmlns:sld="http://www.opengis.net/sld"
+   xmlns:ogc="http://www.opengis.net/ogc"
+   xmlns:gml="http://www.opengis.net/gml"
+   xmlns:pl="http://www.ploomap.net/sld"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation="http://www.opengis.net/sld http://schemas.opengis.net/sld/1.0.0/StyledLayerDescriptor.xsd">
+
+  <!-- *************************************************************************
+       style de base -->
+  <sld:NamedLayer>
+    <sld:Name>default</sld:Name>
+    <sld:UserStyle>
+      <sld:FeatureTypeStyle>
+        <sld:Rule>
+          <sld:PointSymbolizer>
+            <sld:Graphic>
+              <sld:ExternalGraphic>
+                <sld:OnlineResource xlink:href="/lib/cartapatate/style/marker/lieu.png" />
+                <sld:Format>image/png</sld:Format>
+              </sld:ExternalGraphic>
+              <sld:Opacity>1</sld:Opacity>
+              <!--sld:Size>24</sld:Size-->
+              <pl:GraphicWidth>21</pl:GraphicWidth>
+              <pl:GraphicHeight>25</pl:GraphicHeight>
+              <pl:GraphicXOffset>-10</pl:GraphicXOffset>
+              <pl:GraphicYOffset>-24</pl:GraphicYOffset>
+            </sld:Graphic>
+          </sld:PointSymbolizer>
+        </sld:Rule>
+      </sld:FeatureTypeStyle>
+    </sld:UserStyle>
+  </sld:NamedLayer>
+
+  <!-- *************************************************************************
+       style hover -->
+  <sld:NamedLayer>
+    <sld:Name>hover</sld:Name>
+    <sld:UserStyle>
+      <sld:FeatureTypeStyle>
+        <sld:Rule>
+          <sld:PointSymbolizer>
+            <sld:Graphic>
+              <sld:ExternalGraphic>
+                <sld:OnlineResource xlink:href="/lib/cartapatate/style/marker/lieu_select.png" />
+                <sld:Format>image/png</sld:Format>
+              </sld:ExternalGraphic>
+              <sld:Opacity>1</sld:Opacity>
+              <!--sld:Size>24</sld:Size-->
+            </sld:Graphic>
+          </sld:PointSymbolizer>
+        </sld:Rule>
+      </sld:FeatureTypeStyle>
+    </sld:UserStyle>
+  </sld:NamedLayer>
+
+</sld:StyledLayerDescriptor>
